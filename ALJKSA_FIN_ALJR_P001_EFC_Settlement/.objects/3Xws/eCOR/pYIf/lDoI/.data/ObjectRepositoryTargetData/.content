@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="MS6wrb5Hv0GueWpxu_aNyg" Reference="KLsic7J1QE-Q7h60I_1cQw/fL23vsZiK0qa2ohUbPfhng" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://aljbodev.alj.com/BOE/portal/2210051642/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" DesignTimeRectangle="936, 614, 31, 24" DesignTimeScaleFactor="0.75" ElementType="Button" FriendlyName="'RunRefresh the'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-tooltip='Refresh the document using the prompts values' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-tooltip='Refresh the document using the prompts values' tag='BUTTON' type='' class='sapMBtnBase sapMBtn sapMBtnInverted wingTestDocumentPromptsSummaryRunAction sapMBarChild' aaname='Refresh the document using the prompts values' check:text='RunRefresh the document using the prompts values' /&gt;" Guid="6f40f8ac-6015-4955-a9bb-defb55a02791" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="551d1872200e0a889ab0d914b43297d2.png" xmlns="">0mtO52CUcGEKejyA5fWTjgA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

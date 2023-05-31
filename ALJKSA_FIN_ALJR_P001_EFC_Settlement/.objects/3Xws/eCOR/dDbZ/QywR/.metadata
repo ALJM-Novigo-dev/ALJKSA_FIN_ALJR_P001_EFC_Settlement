@@ -1,0 +1,14 @@
+﻿{
+  "Id": "QywRBoGOlkC5NGz7BZ9V_w",
+  "Reference": "Fv2nvoLrq0eKUR-rLQM7hA/QywRBoGOlkC5NGz7BZ9V_w",
+  "ParentRef": "Fv2nvoLrq0eKUR-rLQM7hA/dDbZE8FisEOCSdoQMYjf9Q",
+  "Name": "001_SAPBI_UserName",
+  "Description": "SAPBI UserName",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Created": "2023-04-04T05:44:09.5458977Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-04-04T05:44:09.5458977Z"
+}

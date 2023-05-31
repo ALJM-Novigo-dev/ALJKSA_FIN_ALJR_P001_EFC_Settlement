@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="FpBgdyRTFkOx_oaCXzPUOw" Reference="KLsic7J1QE-Q7h60I_1cQw/z392EMypzUensBZPcnIWOQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://aljbodev.alj.com/BOE/portal/2210051642/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" DesignTimeRectangle="812, 147, 99, 32" DesignTimeScaleFactor="1" FriendlyName="'Calendar Month'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.Label' ui5p-text='Calendar Month' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.Label' ui5p-text='Calendar Month' tag='SPAN' type='' class='sapMLabel sapUiSelectable sapMLabelMaxWidth wingPromptLovPromptTitle sapMBarChild' aaname='' check:innerText='Calendar Month' /&gt;" Guid="6d5d5c84-ed36-4f12-9a09-f9609c9edd73" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="f39bf480d73e325371b24a69861e70e4.png" xmlns="">0Pg-70aylsUOCXjhD5UbzVQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

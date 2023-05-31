@@ -1,0 +1,12 @@
+﻿{
+  "Id": "ePsyQ1MnvUiBINXwdshTsQ",
+  "Reference": "Fv2nvoLrq0eKUR-rLQM7hA/ePsyQ1MnvUiBINXwdshTsQ",
+  "ParentRef": "Fv2nvoLrq0eKUR-rLQM7hA/eCORZY0-ek-E5KzfvE6IKQ",
+  "Name": "004_DownloadReport",
+  "Type": "Screen",
+  "Created": "2023-04-04T05:44:10.2345554Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-04-04T05:44:10.2345554Z"
+}

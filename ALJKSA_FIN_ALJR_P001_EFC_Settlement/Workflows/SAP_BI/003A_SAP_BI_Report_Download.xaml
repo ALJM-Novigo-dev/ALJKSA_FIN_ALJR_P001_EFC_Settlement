@@ -1,0 +1,687 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="_003A_SAP_BI_Report_Download" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_CalenderYear" Type="InArgument(x:String)" />
+    <x:Property Name="in_CalenderMonth" Type="InArgument(x:String)" />
+    <x:Property Name="in_SAPBIUrl" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1518,6682</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>_003A_SAP_BI_Report_Download_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="35">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="84">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+      <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence DisplayName="SAP_BI_Report_Download" sap:VirtualizedContainerService.HintSize="1528,6617" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="in_SerchSelectorValue" />
+      <Variable x:TypeArguments="x:String" Name="PreviousYear" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message SAP_BI_Report_Download : Start" sap:VirtualizedContainerService.HintSize="1466,92" sap2010:WorkflowViewState.IdRef="LogMessage_21" Level="Info" Message="[&quot;SAP_BI_Report_Download : Start&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="001_SAPBI_Launch_Pad" sap:VirtualizedContainerService.HintSize="1466,6242" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="2a9e65b7-49dd-4238-8070-6bff257e81e4" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1432,6025" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:RetryScope DisplayName="Retry Scope Query Refresh " sap:VirtualizedContainerService.HintSize="1370,852" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="3">
+              <ui:RetryScope.ActivityBody>
+                <ActivityAction>
+                  <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="400,268" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NClick ClickType="Single" DisplayName="Click '001_QueryRefresh'" sap:VirtualizedContainerService.HintSize="338,157" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2a9e65b7-49dd-4238-8070-6bff257e81e4" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://aljboqa.alj.com/BOE/portal/2305232115/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" ContentHash="TQm0kC4uokSb8jLgdVShAg" DesignTimeRectangle="313, 145, 32, 32" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'001_QueryRefresh'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.bi.webi.ui.control.AriaButton' aaname='Refresh' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.bi.webi.ui.control.AriaButton' aaname='Refresh' tag='BUTTON' type='' class='sapMBtnBase sapMBtn sapWiseWorkbenchTBButton wingTestWorkbenchTBRefreshAction refresh-xray-marker' check:text='Refresh' /&gt;" Guid="31e74506-0107-4be8-99bd-08fb6809b476" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADeSURBVFhH7ZW7EYMwDEAzVBZKxwZMwNGlYwIaOipWcJkNXDFAmjRUCnaOTkbIsnOGU/EqHeeHvrf3Z4GSUCEKFaJQIQoVori60AuaRwuNwWLHSJ8hO0ElkBIJmWcL9/VxnB4M8g1FnJDp/aPVOCNxWdn4Ql4m9Pf/7iHfHx0MFoklgiVkxy5QpnQwhGYY6rzZcTCEXH/ETQ6HMwtFlMwNQT2BxWIBsjZ1zBCwhH5lO5glvyL4JWYKrewuxo34BckXcuycju2+FXNcpYtTJJQDFaJQIQoVolAhisKEFvgCP8dC6MYT3f0AAAAASUVORK5CYII=" InformativeScreenshot="ce42a0a1fcb3972360e2af3fcd09cca5.png" Reference="Fv2nvoLrq0eKUR-rLQM7hA/ZK90D4OST0Ofd7oyjN8tiA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                  </Sequence>
+                </ActivityAction>
+              </ui:RetryScope.ActivityBody>
+              <ui:RetryScope.Condition>
+                <ActivityFunc x:TypeArguments="x:Boolean">
+                  <uix:NCheckState DisplayName="Check App State 'Run Button'" sap:VirtualizedContainerService.HintSize="854,424" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="2a9e65b7-49dd-4238-8070-6bff257e81e4" Version="V3">
+                    <uix:NCheckState.IfExists>
+                      <Sequence DisplayName="Run Button appears" sap:VirtualizedContainerService.HintSize="400,207" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="Log Message -Run Button Appeared" sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Run Button Appeared&quot;]" />
+                      </Sequence>
+                    </uix:NCheckState.IfExists>
+                    <uix:NCheckState.IfNotExists>
+                      <Sequence DisplayName="Run Button does not appear" sap:VirtualizedContainerService.HintSize="400,207" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="Log Message -Run Button does not appeared" sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Run Button does not appeared&quot;]" />
+                      </Sequence>
+                    </uix:NCheckState.IfNotExists>
+                    <uix:NCheckState.Target>
+                      <uix:TargetAnchorable BrowserURL="https://aljbodev.alj.com/BOE/portal/2210051642/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" ContentHash="MS6wrb5Hv0GueWpxu_aNyg" DesignTimeRectangle="936, 614, 31, 24" DesignTimeScaleFactor="0.75" ElementType="Button" FriendlyName="'Run Button'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-tooltip='Refresh the document using the prompts values' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-tooltip='Refresh the document using the prompts values' tag='BUTTON' type='' class='sapMBtnBase sapMBtn sapMBtnInverted wingTestDocumentPromptsSummaryRunAction sapMBarChild' aaname='Refresh the document using the prompts values' check:text='RunRefresh the document using the prompts values' /&gt;" Guid="6f40f8ac-6015-4955-a9bb-defb55a02791" InformativeScreenshot="551d1872200e0a889ab0d914b43297d2.png" Reference="Fv2nvoLrq0eKUR-rLQM7hA/lDoI7y3BQ02hq2VJ2AXEEg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                    </uix:NCheckState.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NCheckState>
+                </ActivityFunc>
+              </ui:RetryScope.Condition>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:RetryScope>
+            <uix:NClick ClickType="Single" DisplayName="Click '002_Calendar Year'" sap:VirtualizedContainerService.HintSize="1370,157" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2a9e65b7-49dd-4238-8070-6bff257e81e4" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://aljbodev.alj.com/BOE/portal/2210051642/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" ContentHash="YEyuCdvbKEaho8mmduEgbA" DesignTimeRectangle="283, 561, 87, 16" DesignTimeScaleFactor="1" FriendlyName="'002_Calendar Year'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.Text' ui5p-text='Calendar Year' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.Text' ui5p-text='Calendar Year' tag='SPAN' type='' class='sapMText sapUiSelectable sapMTextMaxLineWrapper sapMTextMaxWidth wingTestDocumentPromptsSummaryItemText sapWisePromptsSummaryPromptName sapMFlexItem' aaname='' check:text='Calendar Year' /&gt;" Guid="95777514-a5b4-483c-acdf-c69c69083087" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFsAAAAUCAYAAADiOEEgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQsSURBVFhH7ZfbKy5hFMb3/+RC7lzIBVeSlBQ5RIhyKCJyvKQIJVFyuHCBuHAqSS4UEULIISIkcsxx7X5rzzuN2ePbtL/91a55avLNO++8s9aznvW8rx/iI2TwyQ4hfLJDCJ/sEMInO4T4jeyjoyOpra2VyMhICQ8Pl6ysLFleXpb393drxue4urqS/Px82dvbs0aCC9Zlfb7zNyCXgYEBKS8vl8fHR2v0F+bm5iQ5OVlOT0+tkeDhA9m7u7sSHx8vDQ0NcnBwIBcXFzI4OCixsbEyOztrzfoc/wvZgNwyMzNlfn7eGhG5vb2VoqIiGR4etkaCC5tsKkylW1pa5OXlxRr9pYLR0VFVgnPcC/8T2WBqakqKi4uVZHOfl5cn19fXeh9s2GSj5KSkJNnc3LRGvEFR+vr6JCYmRsLCwtRm9vf39ZkX2XRLbm6uWlJcXJxMTk7altTc3KxrNTU1SUREhERHR8vExIT9/OTkREpKSvTdxMRE6enp+UD21taWKpHn2B5rGUGgzrq6Or1SU1M9CwTJkA3JEAzR2Ah4enrS9YiJ2BDi5eWlPiO+hYUFSU9PVw7gwp1Xe3u7FBQU6HsGNtmLi4uSkpLyR9Uwr7GxUc7PzzUxbIaA7+/vfyMb30tLS5Pp6Wl5fn7WotC6rAEIChKXlpbk7u5Oiabgx8fHdvJ0FAXme2VlZXaMjBEH5BAH72RkZNi2ANkUwBD59vam425AGqQ4PRzSuOd7fNcIrKqqSn9Den19vayursrr66sKlLi3t7d1TfJCWOR1c3OjY+AD2WwMpnpfhbO13WSTaGlpqTw8POg96O/vl7a2Nv1NUNiWUQTvo0I25LW1NS2UMx6Sys7O1nleYD3jt/x1f9sLKBjiKAzkAQjKycnRQhicnZ3pGA7gBgWgUE4R0a0mL4MPNpKQkKBJBgKtTWvSXrQQl1Gbm2wSNnOcl1GQkxzA+6xF0FxYCB1j4Cwsah4fH9fiYCNmbSfZrP8VuAtj4nDGbC7iMkqnK93PgDsvA5tsKlxdXa3HPhZzggqjQCrO89bWVpuE7yrbiUBko25+O5W9srKiVsE8REGyGxsbtkU41/su2UYAwEvZTpAXdsgxGfV6KTsg2YDNDK+pqKjQljVHv6ioKBkZGdFFKysrpbe3V5XFBkO7OJWN0vBRPNp49tDQkL6L/xHIzs6Ofi8Q2fgsCeOd/KajnJ5NMbA9EoZs7ok9GGQbz8bLDw8PNRdy6urq0rzHxsaksLBQ4+CePQkb+hbZwOufGips/IekTPvwl6CYg6fx4c7OTn1vZmZG57MpmhMD1tPd3W0rPRDZgOKztvkWpxGKieXRWeYUw8VmWVNTo3sC+BuyAZ2O0DhpEDsnqvX1deWBbqPwjMNTR0eHkm9OMl8m28e/g092COGTHUL4ZIcQPtkhg8hPKrpkBGVpJNQAAAAASUVORK5CYII=" InformativeScreenshot="3dbee90c09532bceee7f30d3d1b68ba3.png" Reference="Fv2nvoLrq0eKUR-rLQM7hA/svvTPwaUfEid0C4hizjqmw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <uix:NCheckState DisplayName="Check App State '002B_Calendar Year Label'" sap:VirtualizedContainerService.HintSize="1370,1967" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="2a9e65b7-49dd-4238-8070-6bff257e81e4" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Calender label appears" sap:VirtualizedContainerService.HintSize="474,1750" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:Boolean" Name="searchResultCheckedattr" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap2010:Annotation.AnnotationText="in_SerchSelectorValue is the selector variable." DisplayName="Assign in_SerchSelectorValue" sap:VirtualizedContainerService.HintSize="412,104" sap2010:WorkflowViewState.IdRef="Assign_1">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[in_SerchSelectorValue]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[in_CalenderYear]</InArgument>
+                    </Assign.Value>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Assign>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="412,92" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="Info" Message="[&quot;Searched Calender Year is : &quot;+in_CalenderYear]" />
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '005_Search Field'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="412,218" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="2a9e65b7-49dd-4238-8070-6bff257e81e4" Text="[in_CalenderYear]" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://aljboqa.alj.com/BOE/portal/2305232115/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" ContentHash="uON_1G5yr06j6VsWy-vfyA" DesignTimeRectangle="585, 242, 458, 32" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'005_Search Field'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.SearchField' ui5p-placeholder='*' class='sapMSF wingPromptLovSearchField wingTestPromptLovSearchField sapMBarChild sapMTBShrinkItem' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.SearchField' ui5p-placeholder='*' class='sapMSF wingPromptLovSearchField wingTestPromptLovSearchField sapMBarChild sapMTBShrinkItem' tag='DIV' type='' aaname='' /&gt;" Guid="919dcf78-3111-4c8f-9238-470b5949bcb0" ImageBase64="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" InformativeScreenshot="b56fd5aafc247aedcb5721a1305fccce.png" Reference="Fv2nvoLrq0eKUR-rLQM7hA/0arOX9dgx0GK1iHUeN96Hw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <uix:NClick ClickType="Single" DisplayName="Click '005A_SearchButton'" sap:VirtualizedContainerService.HintSize="412,157" sap2010:WorkflowViewState.IdRef="NClick_12" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2a9e65b7-49dd-4238-8070-6bff257e81e4" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://aljboqa.alj.com/BOE/portal/2210102313/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" ContentHash="9QuC0ntaNEGwbFDvWIqX3A" DesignTimeRectangle="1091, 242, 32, 32" DesignTimeScaleFactor="1" FriendlyName="'005A_SearchButton'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-tooltip='Search' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-tooltip='Search' tag='BUTTON' type='' class='sapMBtnBase sapMBtn sapMBtnDisabled wingSearchActionButton wingTestSearchActionButton sapUiTinyMarginEnd sapMBarChild' aaname='Search' check:text='Search' /&gt;" Guid="51c73360-9895-4dac-996c-cd8a398b8a42" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD2SURBVFhH7ZQxC8JADEb7/zd3JxfBTRwcXAoOglREHO3oIYLSQR06Rb7CyVVqk7taOSGFB0cSuHdpSFLcS4oJFeJQIQ4V4lAhDhXiCBLa5ScaTNIaiDXV+uItNF3uaThbkbncXjGcEUPOrQ3BSwgXtl3K5SWIhQ7HK43m61pn3kEONahtyksQC2FGJK9HTZd5Egul27yiKecirfvE/3YouhkCeH1bl7i8BC+hc/Gg8WJTgbON2z1kl+RPZsgFM+JuaYCYGw+VChJqw5UKGe6vC4EuUr0IASvl++t6EwpFhThUiEOFOOITyrKMYiIxxlBMJBTVR/QEvQFNCg/hNukAAAAASUVORK5CYII=" InformativeScreenshot="d5082623cf4dbbc32736d1434bbd43a5.png" Reference="Fv2nvoLrq0eKUR-rLQM7hA/SoTVaTlUt06rX1mVln7GNQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NCheckState DisplayName="Check App State '005E_ResultActive'" sap:VirtualizedContainerService.HintSize="412,52" sap2010:WorkflowViewState.IdRef="NCheckState_8" Mode="WaitDisappear" ScopeIdentifier="2a9e65b7-49dd-4238-8070-6bff257e81e4" Version="V3">
+                    <uix:NCheckState.IfExists>
+                      <Sequence DisplayName="Searched month appears" sap:VirtualizedContainerService.HintSize="400,207" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="Log Message Searched month appeared" sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="LogMessage_23" Level="Info" Message="[&quot;Searched Year &quot;+in_CalenderYear+&quot;  appeared&quot;]" />
+                      </Sequence>
+                    </uix:NCheckState.IfExists>
+                    <uix:NCheckState.IfNotExists>
+                      <Sequence DisplayName="Searched month does not appears" sap:VirtualizedContainerService.HintSize="400,207" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="Log Message Searched Calender Month does not appear" sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="LogMessage_24" Level="Error" Message="[&quot;Searched Calender Year does not appear&quot;]" />
+                      </Sequence>
+                    </uix:NCheckState.IfNotExists>
+                    <uix:NCheckState.Target>
+                      <uix:TargetAnchorable BrowserURL="https://aljboqa.alj.com/BOE/portal/2305232115/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" ContentHash="h5raoyWMXUuioKPuizWu_w" DesignTimeRectangle="577, 307, 554, 34" DesignTimeScaleFactor="1" ElementType="TableRow" FriendlyName="'005E_ResultActive'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.Table' ui5p-mode='SingleSelectLeft' /&gt;&lt;webctrl ui5-tableRow='0' ui5-type='Row' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.Table' ui5p-mode='SingleSelectLeft' /&gt;&lt;webctrl ui5-tableRow='0' ui5-type='Row' tag='TR' type='' class='sapMLIB sapMLIB-CTX sapMLIBShowSeparator sapMLIBTypeActive sapMLIBActionable sapMLIBHoverable sapMLIBFocusable sapMListTblRow wingTestLovRow' aaname='' check:innerText='2025' /&gt;" Guid="25773d5e-65fc-4d89-8fe1-0bb3b6209953" InformativeScreenshot="97436393b03c9586cad54082b8bd5a1e.png" Reference="Fv2nvoLrq0eKUR-rLQM7hA/RgrbM5Kq6UGbysYueSOWNg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                    </uix:NCheckState.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NCheckState>
+                  <uix:NGetAttribute Attribute="checked" DisplayName="Get Attribute '007_Report1'" sap:VirtualizedContainerService.HintSize="412,207" sap2010:WorkflowViewState.IdRef="NGetAttribute_2" ScopeIdentifier="2a9e65b7-49dd-4238-8070-6bff257e81e4" Version="V3">
+                    <uix:NGetAttribute.Result>
+                      <OutArgument x:TypeArguments="x:Boolean">[searchResultCheckedattr]</OutArgument>
+                    </uix:NGetAttribute.Result>
+                    <uix:NGetAttribute.Target>
+                      <uix:TargetAnchorable BrowserURL="https://aljbodev.alj.com/BOE/portal/2210051642/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" ContentHash="fRgUIwwojUWkUoxtdSVmew" DesignTimeRectangle="460, 356, 702, 33" DesignTimeScaleFactor="1" ElementType="TableRow" FriendlyName="'007_Report1'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.Table' /&gt;&lt;webctrl ui5-tableRow='0' ui5-type='Row' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.Table' /&gt;&lt;webctrl ui5-tableRow='0' ui5-type='Row' tag='TR' type='' class='sapMLIB sapMLIB-CTX sapMLIBShowSeparator sapMLIBTypeInactive sapMLIBActionable sapMLIBHoverable sapMLIBSelected sapMLIBFocusable sapMListTblRow wingTestExportReportListItem' aaname='' check:innerText='Report 1 (Current Report)' /&gt;" Guid="64367efa-0560-42d2-8ecb-d08cde300eab" InformativeScreenshot="e52467d500ec5436699ea6a2f822e24f.png" Reference="Fv2nvoLrq0eKUR-rLQM7hA/ykYbqEQbbUqzq0XmlmXbCw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                    </uix:NGetAttribute.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NGetAttribute>
+                  <ui:LogMessage DisplayName="Log Message - Calender Month Selected" sap:VirtualizedContainerService.HintSize="412,92" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;Has Calender Month selected : &quot;+searchResultCheckedattr.ToString]">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:LogMessage>
+                  <If Condition="[searchResultCheckedattr=False]" DisplayName="If Search result Checked" sap:VirtualizedContainerService.HintSize="412,433" sap2010:WorkflowViewState.IdRef="If_3">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If.Then>
+                      <uix:NClick ClickType="Single" DisplayName="Click '005B_SearchResult'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_28" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2a9e65b7-49dd-4238-8070-6bff257e81e4" Version="V3">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://aljboqa.alj.com/BOE/portal/2210102313/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" ContentHash="hHFlJggEAUWFHAqHBQqbrQ" DesignTimeRectangle="630, 285, 377, 26" DesignTimeScaleFactor="0.75" FriendlyName="'005B_SearchResult'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.Table' ui5p-mode='SingleSelectLeft' /&gt;&lt;webctrl innertext='{0}' visibleinnertext='{0}' /&gt;&quot;, in_SerchSelectorValue)]" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.Table' ui5p-mode='SingleSelectLeft' /&gt;&lt;webctrl innertext='{0}' visibleinnertext='{0}' tag='TD' type='' class='sapMListTblCell' aaname='' check:text='11' /&gt;&quot;, in_SerchSelectorValue)]" Guid="0ff30860-1c4e-434e-816f-4193f509333b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAX0AAAAeCAYAAADAbs4RAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADnSURBVHhe7dyxqYMAFIVhd3IMx3EPC9vsIA7iDDZib2d5w4OQJhZJ5+N8H5zmgu2PWNic51lmZpaxZt/3MjOzjDUFQAzRBwgi+gBBRB8giOgDBBF9gCCiDxBE9AGC/BT9bduq7/sax/F1ub4BcE9fR/84jhqGoaZpegf+6gbAff38eWdZlo/AX90AuB/RBwgi+gBBRB8giOgDBPk6+uu6Vtd11bbte4/H4+M2z/PrCQDu5uc3fQD+L9EHCCL6AEFEHyCI6AMEEX2AIKIPEET0AYKIPkCQ5u8XCmZmljFv+gBBRB8gRtUTv/g+eB9wbH8AAAAASUVORK5CYII=" InformativeScreenshot="0aa5360e506e176690da24f3cf123a8c.png" Reference="Fv2nvoLrq0eKUR-rLQM7hA/ZldAVmhkUkuMvPUYr6cSig" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                        </uix:NClick.Target>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </uix:NClick>
+                    </If.Then>
+                  </If>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Calender label  does not appear" sap:VirtualizedContainerService.HintSize="400,337" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message Calender Label doesnot apperar" sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Calender Label doesnot apperar&quot;]" />
+                  <Throw DisplayName="Throw Calender Label doesnot apperar" Exception="[new Exception(&quot;Calender Label doesnot apperar&quot;)]" sap:VirtualizedContainerService.HintSize="338,90" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://aljbodev.alj.com/BOE/portal/2210051642/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" ContentHash="RjNzFoIN9UWKrVEmZev_NQ" DesignTimeRectangle="819, 147, 87, 32" DesignTimeScaleFactor="1" FriendlyName="'002B_Calendar Year Label'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.Label' ui5p-text='Calendar Year' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.Label' ui5p-text='Calendar Year' tag='SPAN' type='' class='sapMLabel sapUiSelectable sapMLabelMaxWidth wingPromptLovPromptTitle sapMBarChild' aaname='' check:innerText='Calendar Year' /&gt;" Guid="6daf19e6-d290-4f33-962c-9436eb38cb22" InformativeScreenshot="51f48eb16bd315e526347aa225b8c754.png" Reference="Fv2nvoLrq0eKUR-rLQM7hA/n3nXZCrEaE-Y7IfxsIs8MA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+              </uix:NCheckState.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheckState>
+            <uix:NClick ClickType="Single" DisplayName="Click '001_Calendar Month'" sap:VirtualizedContainerService.HintSize="1370,157" sap2010:WorkflowViewState.IdRef="NClick_14" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2a9e65b7-49dd-4238-8070-6bff257e81e4" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://aljbodev.alj.com/BOE/portal/2210051642/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" ContentHash="0FbSii0VjE-LDmFfWlnvGA" DesignTimeRectangle="283, 584, 277, 34" DesignTimeScaleFactor="1" FriendlyName="'001_Calendar Month'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.VBox' innertext='Calendar Month*' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.VBox' innertext='Calendar Month*' tag='DIV' type='' class='sapMFlexBox sapMVBox sapMFlexBoxJustifyStart sapMFlexBoxAlignItemsStart sapMFlexBoxWrapNoWrap sapMFlexBoxAlignContentStretch sapWiseSummaryItemContainer sapMFlexItemAlignAuto sapMFlexBoxBGTransparent sapMFlexItem' aaname='' check:text='Calendar Month(1)11' /&gt;" Guid="ac24ab8c-75e4-4a68-ab77-a25f52c479c4" InformativeScreenshot="4f21ab6cd612c1c2b0ad6045afb71607.png" Reference="Fv2nvoLrq0eKUR-rLQM7hA/pq01Z_D14EK_k1bQBySLRQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NCheckState DisplayName="Check App State '001B_Calendar Label'" sap:VirtualizedContainerService.HintSize="1370,2196" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="2a9e65b7-49dd-4238-8070-6bff257e81e4" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Calender label appears" sap:VirtualizedContainerService.HintSize="916,1979" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:Boolean" Name="searchResultCheckedattr" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap2010:Annotation.AnnotationText="In value is the selector variable." DisplayName="Assign in_Value " sap:VirtualizedContainerService.HintSize="854,93" sap2010:WorkflowViewState.IdRef="Assign_2">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[in_SerchSelectorValue]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[if(in_CalenderMonth.ToString.StartsWith("0"), in_CalenderMonth.Substring(1,1), in_CalenderMonth)]</InArgument>
+                    </Assign.Value>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Assign>
+                  <ui:LogMessage DisplayName="Log Message Calender Month is : " sap:VirtualizedContainerService.HintSize="854,92" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;Calender Month is : &quot;+in_CalenderMonth]" />
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '005_Search Field'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="854,218" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="2a9e65b7-49dd-4238-8070-6bff257e81e4" Text="[in_CalenderMonth]" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://aljboqa.alj.com/BOE/portal/2305232115/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" ContentHash="uON_1G5yr06j6VsWy-vfyA" DesignTimeRectangle="585, 242, 458, 32" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'005_Search Field'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.SearchField' ui5p-placeholder='*' class='sapMSF wingPromptLovSearchField wingTestPromptLovSearchField sapMBarChild sapMTBShrinkItem' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.SearchField' ui5p-placeholder='*' class='sapMSF wingPromptLovSearchField wingTestPromptLovSearchField sapMBarChild sapMTBShrinkItem' tag='DIV' type='' aaname='' /&gt;" Guid="919dcf78-3111-4c8f-9238-470b5949bcb0" ImageBase64="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" InformativeScreenshot="b56fd5aafc247aedcb5721a1305fccce.png" Reference="Fv2nvoLrq0eKUR-rLQM7hA/0arOX9dgx0GK1iHUeN96Hw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <uix:NClick ClickType="Single" DisplayName="Click '005A_SearchButton'" sap:VirtualizedContainerService.HintSize="854,157" sap2010:WorkflowViewState.IdRef="NClick_15" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2a9e65b7-49dd-4238-8070-6bff257e81e4" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://aljboqa.alj.com/BOE/portal/2210102313/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" ContentHash="9QuC0ntaNEGwbFDvWIqX3A" DesignTimeRectangle="1091, 242, 32, 32" DesignTimeScaleFactor="1" FriendlyName="'005A_SearchButton'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-tooltip='Search' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-tooltip='Search' tag='BUTTON' type='' class='sapMBtnBase sapMBtn sapMBtnDisabled wingSearchActionButton wingTestSearchActionButton sapUiTinyMarginEnd sapMBarChild' aaname='Search' check:text='Search' /&gt;" Guid="51c73360-9895-4dac-996c-cd8a398b8a42" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD2SURBVFhH7ZQxC8JADEb7/zd3JxfBTRwcXAoOglREHO3oIYLSQR06Rb7CyVVqk7taOSGFB0cSuHdpSFLcS4oJFeJQIQ4V4lAhDhXiCBLa5ScaTNIaiDXV+uItNF3uaThbkbncXjGcEUPOrQ3BSwgXtl3K5SWIhQ7HK43m61pn3kEONahtyksQC2FGJK9HTZd5Egul27yiKecirfvE/3YouhkCeH1bl7i8BC+hc/Gg8WJTgbON2z1kl+RPZsgFM+JuaYCYGw+VChJqw5UKGe6vC4EuUr0IASvl++t6EwpFhThUiEOFOOITyrKMYiIxxlBMJBTVR/QEvQFNCg/hNukAAAAASUVORK5CYII=" InformativeScreenshot="d5082623cf4dbbc32736d1434bbd43a5.png" Reference="Fv2nvoLrq0eKUR-rLQM7hA/SoTVaTlUt06rX1mVln7GNQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NCheckState DisplayName="Check App State 'Check App State '005E_ResultActive''" sap:VirtualizedContainerService.HintSize="854,424" sap2010:WorkflowViewState.IdRef="NCheckState_6" ScopeIdentifier="2a9e65b7-49dd-4238-8070-6bff257e81e4" Version="V3">
+                    <uix:NCheckState.IfExists>
+                      <Sequence DisplayName="Searched Calender Month  appears" sap:VirtualizedContainerService.HintSize="400,207" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Info" Message="[&quot;Searched Calender Month Appeared &quot;]" />
+                      </Sequence>
+                    </uix:NCheckState.IfExists>
+                    <uix:NCheckState.IfNotExists>
+                      <Sequence DisplayName="Searched Calender Month does not appear" sap:VirtualizedContainerService.HintSize="400,207" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="Log Message Searched Calender Month not Appeared " sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="Error" Message="[&quot;Searched Calender Month not Appeared &quot;]" />
+                      </Sequence>
+                    </uix:NCheckState.IfNotExists>
+                    <uix:NCheckState.Target>
+                      <uix:TargetAnchorable BrowserURL="https://aljboqa.alj.com/BOE/portal/2210102313/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" ContentHash="rbkxe2m2m0ep3eNp2LFpvw" DesignTimeRectangle="577, 307, 554, 34" DesignTimeScaleFactor="1" ElementType="TableRow" FriendlyName="'Check App State '005E_ResultActive''" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-tableRow='0' ui5-type='Row' class='sapMLIB sapMLIB-CTX sapMLIBShowSeparator sapMLIBTypeActive sapMLIBActionable sapMLIBHoverable sapMLIBFocusable sapMListTblRow wingTestLovRow' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-tableRow='0' ui5-type='Row' class='sapMLIB sapMLIB-CTX sapMLIBShowSeparator sapMLIBTypeActive sapMLIBActionable sapMLIBHoverable sapMLIBFocusable sapMListTblRow wingTestLovRow' tag='TR' type='' aaname='' check:text='unchecked' /&gt;" Guid="a2cb110c-c955-483b-be01-3b1aac6c8d8c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAi4AAAAmCAYAAADjhhCbAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMBSURBVHhe7d29SiRNFAbg754MxFvQRDAQEwMTQWNjcw0EAzNTb8DQQFTUwF8QNDAwEDUwUFAwEDzL6W96YXfZ2e2Z2cXqfR54oemumvilqnr6v7u7u8i8vb2JiIiIfMqMj4/H9PR0fC0uIiIiIp81PxQXAIDPSnEBAIqhuAAAxVBcAIBiKC4AQDEUFwCgGIoLAFAMxQUAKEbfxeXp6Slubm7i7Ows9vb2quR13stnAACD0nNxeX9/j4uLi9je3u6aHJNjAQD61VNxeXl5qVZWspjs7u7G9fV1tbqSBSWT13kvn+WYHJtzAAD60bi4ZDE5PDysCsnp6Wn1waOfyWc5JsfmnD+x8nJ/fx8LCwsxPDwco6Ojsbm5aYUHAFqqcXGpt4eykPyuurzk3EF6fn6O+fn5WFlZicfHxzg/P4/FxcW4vb3tjAAA2qRRccktoCwguQXUbaXlezm23jYa5IHd/f39mJubqwoMANB+jYpLvimU5SPPrzSVc3Ju/sagrK2tVQEA/g2Niku95dPLqkm9WtNki+lXVldXY319PZaXl2NkZMQZFwBouUbFpd7u6aUY5Jycm28YDUoWl7GxsdjZ2YnX19c4OTmJiYmJ2Nra6owAANrkrxeX/I1ByeKSB3M/Pj46dyI2Njaq+wBA+xS9VZQrK0tLS98UKcUFANqr6MO5Dw8PMTMzUxWYLEa5VTQ1NRXHx8edEQBAmzQqLvWqSZ5Tafo6dP1Pu72s1nRzeXkZs7OzMTQ0FJOTk3FwcPDN1hEA0B6Nikuq/4AuP6T4u+otpqurq84dAIDmGheXPE+Sqxp1eem28pLPckyOzTm9HOoFAKg1Li4pP5hYl5fcAsrzK7kFlMUkk9d5r94eyrE+sggA9Kun4pKyoNTbRt2S20NWWgCAQei5uNRydSXfFMpzLPkfLZm8znuDPogLAPzb+i4uAAB/i+ICABRDcQEAiqG4AADFUFwAgGIoLgBAMRQXAKAYPxSXo6MjERERkU8ZKy4AQDEUFwCgGP8Xl+n4ApC6uFUYgKN4AAAAAElFTkSuQmCC" InformativeScreenshot="1ded7d6af3bfe03357360464dc04c2bd.png" Reference="Fv2nvoLrq0eKUR-rLQM7hA/9cx9uuXF_kW2gJd_uXFwRg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                    </uix:NCheckState.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NCheckState>
+                  <uix:NGetAttribute Attribute="checked" DisplayName="Get Attribute 'Check App State '005E_ResultActive''" sap:VirtualizedContainerService.HintSize="854,207" sap2010:WorkflowViewState.IdRef="NGetAttribute_3" ScopeIdentifier="2a9e65b7-49dd-4238-8070-6bff257e81e4" Version="V3">
+                    <uix:NGetAttribute.Result>
+                      <OutArgument x:TypeArguments="x:Boolean">[searchResultCheckedattr]</OutArgument>
+                    </uix:NGetAttribute.Result>
+                    <uix:NGetAttribute.Target>
+                      <uix:TargetAnchorable BrowserURL="https://aljboqa.alj.com/BOE/portal/2210102313/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" ContentHash="rbkxe2m2m0ep3eNp2LFpvw" DesignTimeRectangle="577, 307, 554, 34" DesignTimeScaleFactor="1" ElementType="TableRow" FriendlyName="'Check App State '005E_ResultActive''" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-tableRow='0' ui5-type='Row' class='sapMLIB sapMLIB-CTX sapMLIBShowSeparator sapMLIBTypeActive sapMLIBActionable sapMLIBHoverable sapMLIBFocusable sapMListTblRow wingTestLovRow' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-tableRow='0' ui5-type='Row' class='sapMLIB sapMLIB-CTX sapMLIBShowSeparator sapMLIBTypeActive sapMLIBActionable sapMLIBHoverable sapMLIBFocusable sapMListTblRow wingTestLovRow' tag='TR' type='' aaname='' check:text='unchecked' /&gt;" Guid="a2cb110c-c955-483b-be01-3b1aac6c8d8c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAi4AAAAmCAYAAADjhhCbAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMBSURBVHhe7d29SiRNFAbg754MxFvQRDAQEwMTQWNjcw0EAzNTb8DQQFTUwF8QNDAwEDUwUFAwEDzL6W96YXfZ2e2Z2cXqfR54oemumvilqnr6v7u7u8i8vb2JiIiIfMqMj4/H9PR0fC0uIiIiIp81PxQXAIDPSnEBAIqhuAAAxVBcAIBiKC4AQDEUFwCgGIoLAFAMxQUAKEbfxeXp6Slubm7i7Ows9vb2quR13stnAACD0nNxeX9/j4uLi9je3u6aHJNjAQD61VNxeXl5qVZWspjs7u7G9fV1tbqSBSWT13kvn+WYHJtzAAD60bi4ZDE5PDysCsnp6Wn1waOfyWc5JsfmnD+x8nJ/fx8LCwsxPDwco6Ojsbm5aYUHAFqqcXGpt4eykPyuurzk3EF6fn6O+fn5WFlZicfHxzg/P4/FxcW4vb3tjAAA2qRRccktoCwguQXUbaXlezm23jYa5IHd/f39mJubqwoMANB+jYpLvimU5SPPrzSVc3Ju/sagrK2tVQEA/g2Niku95dPLqkm9WtNki+lXVldXY319PZaXl2NkZMQZFwBouUbFpd7u6aUY5Jycm28YDUoWl7GxsdjZ2YnX19c4OTmJiYmJ2Nra6owAANrkrxeX/I1ByeKSB3M/Pj46dyI2Njaq+wBA+xS9VZQrK0tLS98UKcUFANqr6MO5Dw8PMTMzUxWYLEa5VTQ1NRXHx8edEQBAmzQqLvWqSZ5Tafo6dP1Pu72s1nRzeXkZs7OzMTQ0FJOTk3FwcPDN1hEA0B6Nikuq/4AuP6T4u+otpqurq84dAIDmGheXPE+Sqxp1eem28pLPckyOzTm9HOoFAKg1Li4pP5hYl5fcAsrzK7kFlMUkk9d5r94eyrE+sggA9Kun4pKyoNTbRt2S20NWWgCAQei5uNRydSXfFMpzLPkfLZm8znuDPogLAPzb+i4uAAB/i+ICABRDcQEAiqG4AADFUFwAgGIoLgBAMRQXAKAYPxSXo6MjERERkU8ZKy4AQDEUFwCgGP8Xl+n4ApC6uFUYgKN4AAAAAElFTkSuQmCC" InformativeScreenshot="1ded7d6af3bfe03357360464dc04c2bd.png" Reference="Fv2nvoLrq0eKUR-rLQM7hA/9cx9uuXF_kW2gJd_uXFwRg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                    </uix:NGetAttribute.Target>
+                  </uix:NGetAttribute>
+                  <If Condition="[searchResultCheckedattr=False]" DisplayName="If Search result Checked" sap:VirtualizedContainerService.HintSize="854,433" sap2010:WorkflowViewState.IdRef="If_4">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If.Then>
+                      <uix:NClick ClickType="Single" DisplayName="Click '005B_SearchResult'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_29" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2a9e65b7-49dd-4238-8070-6bff257e81e4" Version="V3">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://aljboqa.alj.com/BOE/portal/2210102313/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" ContentHash="hHFlJggEAUWFHAqHBQqbrQ" DesignTimeRectangle="630, 285, 377, 26" DesignTimeScaleFactor="0.75" FriendlyName="'005B_SearchResult'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.Table' ui5p-mode='SingleSelectLeft' /&gt;&lt;webctrl innertext='{0}' visibleinnertext='{0}' /&gt;&quot;, in_SerchSelectorValue)]" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.Table' ui5p-mode='SingleSelectLeft' /&gt;&lt;webctrl innertext='{0}' visibleinnertext='{0}' tag='TD' type='' class='sapMListTblCell' aaname='' check:text='11' /&gt;&quot;, in_SerchSelectorValue)]" Guid="0ff30860-1c4e-434e-816f-4193f509333b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAX0AAAAeCAYAAADAbs4RAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADnSURBVHhe7dyxqYMAFIVhd3IMx3EPC9vsIA7iDDZib2d5w4OQJhZJ5+N8H5zmgu2PWNic51lmZpaxZt/3MjOzjDUFQAzRBwgi+gBBRB8giOgDBBF9gCCiDxBE9AGC/BT9bduq7/sax/F1ub4BcE9fR/84jhqGoaZpegf+6gbAff38eWdZlo/AX90AuB/RBwgi+gBBRB8giOgDBPk6+uu6Vtd11bbte4/H4+M2z/PrCQDu5uc3fQD+L9EHCCL6AEFEHyCI6AMEEX2AIKIPEET0AYKIPkCQ5u8XCmZmljFv+gBBRB8gRtUTv/g+eB9wbH8AAAAASUVORK5CYII=" InformativeScreenshot="0aa5360e506e176690da24f3cf123a8c.png" Reference="Fv2nvoLrq0eKUR-rLQM7hA/ZldAVmhkUkuMvPUYr6cSig" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                    </If.Then>
+                  </If>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Calender label  does not appear" sap:VirtualizedContainerService.HintSize="400,207" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message Calender label  does not appear" sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Error" Message="[&quot;Calender label  does not appear&quot;]" />
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://aljbodev.alj.com/BOE/portal/2210051642/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" ContentHash="FpBgdyRTFkOx_oaCXzPUOw" DesignTimeRectangle="812, 147, 99, 32" DesignTimeScaleFactor="1" FriendlyName="'001B_Calendar Label'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.Label' ui5p-text='Calendar Month' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.Label' ui5p-text='Calendar Month' tag='SPAN' type='' class='sapMLabel sapUiSelectable sapMLabelMaxWidth wingPromptLovPromptTitle sapMBarChild' aaname='' check:innerText='Calendar Month' /&gt;" Guid="6d5d5c84-ed36-4f12-9a09-f9609c9edd73" InformativeScreenshot="f39bf480d73e325371b24a69861e70e4.png" Reference="Fv2nvoLrq0eKUR-rLQM7hA/zUYJ1StUzkeoP9QOFHeXLQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+              </uix:NCheckState.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheckState>
+            <uix:NCheckState DisplayName="Check App State '003B_Enter values for Calendar Year'" sap:VirtualizedContainerService.HintSize="1370,52" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="2a9e65b7-49dd-4238-8070-6bff257e81e4" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Enter values for Calendar Year'appears" sap:VirtualizedContainerService.HintSize="1056,2813" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message Enter values for Calendar Year'" sap:VirtualizedContainerService.HintSize="994,92" sap2010:WorkflowViewState.IdRef="LogMessage_16" Level="Info" Message="[&quot;Enter values for Calendar Year'present in the Prompt&quot;]" />
+                  <uix:NClick ClickType="Single" DisplayName="Click '003_Enter value(s) for calender Year label'" sap:VirtualizedContainerService.HintSize="994,157" sap2010:WorkflowViewState.IdRef="NClick_17" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2a9e65b7-49dd-4238-8070-6bff257e81e4" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://aljbodev.alj.com/BOE/portal/2210051642/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" ContentHash="K018k3RJjUy7u2YQNAUdHA" DesignTimeRectangle="254, 640, 277, 34" DesignTimeScaleFactor="1" FriendlyName="'003_Enter value(s) for calender Year label'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.VBox' innertext='Enter value(s) for Calendar Year*' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.VBox' innertext='Enter value(s) for Calendar Year*' tag='DIV' type='' class='sapMFlexBox sapMVBox sapMFlexBoxJustifyStart sapMFlexBoxAlignItemsStart sapMFlexBoxWrapNoWrap sapMFlexBoxAlignContentStretch sapWiseSummaryItemContainer sapMFlexItemAlignAuto sapMFlexBoxBGTransparent sapMFlexItem' aaname='' check:text='Enter value(s) for Calendar Year(2)2021; 2022' /&gt;" Guid="7fa61c7e-fdf9-42a3-a22d-0a2c4726e0f3" ImageBase64="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" InformativeScreenshot="8e593ef715831631d00725883ea79f9c.png" Reference="Fv2nvoLrq0eKUR-rLQM7hA/gcpJWbnuWEqREKgdljHzwA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NCheckState DisplayName="Check App State '003B_Enter values for Calendar Year'" sap:VirtualizedContainerService.HintSize="994,2369" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="2a9e65b7-49dd-4238-8070-6bff257e81e4" Version="V3">
+                    <uix:NCheckState.IfExists>
+                      <Sequence DisplayName="Calender label appear" sap:VirtualizedContainerService.HintSize="540,2152" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                        <Sequence.Variables>
+                          <Variable x:TypeArguments="x:String" Name="textAttribute" />
+                        </Sequence.Variables>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="Log Message Calender label appear" sap:VirtualizedContainerService.HintSize="478,92" sap2010:WorkflowViewState.IdRef="LogMessage_18" Level="Info" Message="[&quot;Calender label appear&quot;]" />
+                        <uix:NClick ClickType="Single" DisplayName="Click '003D_Select_Options'" sap:VirtualizedContainerService.HintSize="478,157" sap2010:WorkflowViewState.IdRef="NClick_20" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2a9e65b7-49dd-4238-8070-6bff257e81e4" Version="V3">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="https://aljboqa.alj.com/BOE/portal/2210102313/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" ContentHash="w7PulXAleUGEHervb7XXEA" DesignTimeRectangle="608, 208, 35, 24" DesignTimeScaleFactor="0.75" FriendlyName="'003D_Select_Options'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-tooltip='Display or hide the current prompt answers page' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-tooltip='Display or hide the current prompt answers page' tag='BUTTON' type='' class='sapMBtnBase sapMBtn wingTestPromptLovAnswerCount sapWisePromptLovAnswerCountButton sapMBarChild' aaname='Display or hide the current prompt answers page' check:text='2Display or hide the current prompt answers page' /&gt;" Guid="1c139c19-59a6-402f-88d8-f9c38c54f077" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACcAAAAcCAYAAADiHqZbAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKBSURBVFhH7ZbvS1NRGMf7o3rdu14URBH0qjcFgQW1sKSkIKLCfoArM3Qsmolmma3Zj6mMSM1SrGyjzKxtpGsT53Jbc3O7+/XtPgeu7N5z13Z3ZVvggQ/j8jxnz/d8z3PuPdsicQH1ypa4Svk/xI05vTAYH2P74as1g+qTDk7cCTGwq7EdNMyDEzVh31kT08GJI+Ufvy1yq6kmUn1VcQ3XHsiStdDcYYN1zImj1/tU4+Ug1VcVp+bcla4huH+tIBRZY3gDIVyy2GU5hy5344s3gHwemHB5sPvUHVm8XDQ7Zxt3YT2VxvzCMmbmfRh3utHUbt2I7zS0wT45i0w2h+jaOowPX8nma0GzcyQuHEtsFKXta+kewY5jrey5rf81ovEkE0ciSWzhfIJyh8RYUkizA5dICqwFlHkVOSeJI2FLv6NICRlYRz+h8dYAPP4QK/j15xKOtPRw8wmDsZ+1g8vtx/DULFb/JBAMx7g8Xc7tbzZhdOY7sqJLqXQG/pUIcmKjUfxGr4Obqwb1Jy1weZUXp8s5ej540YL3cwtMFI10JstypG0uhWN6Dtlcnm2zMqa75wjavs+eABNHp5TcKJxTjHsv3jHHf/iCOHDezMV1OydB77OnYlNTH+490yme5EX4gmEcb30ky5OgQxRLJNl2Ug+q5WyKc0pKiSMxJIpO6X37FC6Yn+Nc5yCXt2nOFVJK3N1nb1lvFo64KFSZp9m5PscHCIo/LjbodaG2wHLR7Bx9isi1nuFp9I4Ux/JyEidv6rtyaXaumvzTudO3n8iSq41UnxNHl7wucWv2NHWw/qGkav5SXZPtjfplk67HFKDkWkH1Va/p9ciWuEqpY3EC/gIhINV5z3bLOAAAAABJRU5ErkJggg==" InformativeScreenshot="daf0f8e3caac7867efc21c94efea0c39.png" Reference="Fv2nvoLrq0eKUR-rLQM7hA/7jssbEF5NUWKRnC7i5u5lQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                        <uix:NGetAttribute Attribute="text" DisplayName="Get Attribute '005C_SearchListResult'" sap:VirtualizedContainerService.HintSize="478,207" sap2010:WorkflowViewState.IdRef="NGetAttribute_1" ScopeIdentifier="2a9e65b7-49dd-4238-8070-6bff257e81e4" Version="V3">
+                          <uix:NGetAttribute.Result>
+                            <OutArgument x:TypeArguments="x:String">[textAttribute]</OutArgument>
+                          </uix:NGetAttribute.Result>
+                          <uix:NGetAttribute.Target>
+                            <uix:TargetAnchorable BrowserURL="https://aljboqa.alj.com/BOE/portal/2210102313/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" ContentHash="KPQbIpYF_0qDpkKQLtfcfA" DesignTimeRectangle="605, 259, 415, 351" DesignTimeScaleFactor="0.75" ElementType="TableRow" FriendlyName="'005C_SearchListResult'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.ScrollContainer' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.ScrollContainer' tag='DIV' type='' class='sapMScrollContVH sapMScrollCont wingAnswerTableContainer sapMFlexItem sapUiScrollDelegate' aaname='' check:text='Selected value(s)2021Delete2022DeleteMore' /&gt;" Guid="4fcdd6e1-33b5-4cda-b96b-52a83fd1aded" ImageBase64="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" InformativeScreenshot="970afe900dd0b4f206b63b1853bf60ec.png" Reference="Fv2nvoLrq0eKUR-rLQM7hA/B0mlaLxO9UGOF8-oA2x59w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                          </uix:NGetAttribute.Target>
+                        </uix:NGetAttribute>
+                        <ui:LogMessage DisplayName="Log Message Active Calender years" sap:VirtualizedContainerService.HintSize="478,92" sap2010:WorkflowViewState.IdRef="LogMessage_19" Level="Info" Message="[&quot; Active Calender Years are : &quot;+textAttribute]" />
+                        <If Condition="[textAttribute.Contains( in_CalenderYear)]" DisplayName="If Calender Year already present" sap:VirtualizedContainerService.HintSize="478,1134" sap2010:WorkflowViewState.IdRef="If_1">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <If.Then>
+                            <ui:LogMessage DisplayName="Log Message Calender Year already selected" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Calender Year already selected&quot;+in_CalenderYear]" />
+                          </If.Then>
+                          <If.Else>
+                            <Sequence DisplayName="Calender Years are not selected" sap:VirtualizedContainerService.HintSize="400,858" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Assign sap2010:Annotation.AnnotationText="In value is the selector variable." DisplayName="Assign in_Value " sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="Assign_4">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[in_SerchSelectorValue]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">[in_CalenderYear]</InArgument>
+                                </Assign.Value>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </Assign>
+                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '005_Search Field'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,219" sap2010:WorkflowViewState.IdRef="NTypeInto_7" ScopeIdentifier="2a9e65b7-49dd-4238-8070-6bff257e81e4" Text="[in_CalenderYear]" Version="V3">
+                                <uix:NTypeInto.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://aljbodev.alj.com/BOE/portal/2210051642/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" ContentHash="UUqG4gA7WEi395j08b9hhg" DesignTimeRectangle="605, 235, 348, 24" DesignTimeScaleFactor="0.75" ElementType="InputBox" FriendlyName="'005_Search Field'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.bi.webi.ui.control.SearchField' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.bi.webi.ui.control.SearchField' tag='DIV' type='' class='sapMSF wingPromptLovSearchField wingTestPromptLovSearchField sapMBarChild sapMTBShrinkItem' aaname='' /&gt;" Guid="720bc80b-a47a-4265-98a3-7c652cf87665" InformativeScreenshot="831109760ca25637961339c532f6bb8c.png" Reference="Fv2nvoLrq0eKUR-rLQM7hA/0arOX9dgx0GK1iHUeN96Hw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                                </uix:NTypeInto.Target>
+                              </uix:NTypeInto>
+                              <uix:NClick ClickType="Single" DisplayName="Click '005A_SearchButton'" sap:VirtualizedContainerService.HintSize="338,158" sap2010:WorkflowViewState.IdRef="NClick_25" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2a9e65b7-49dd-4238-8070-6bff257e81e4" Version="V3">
+                                <uix:NClick.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://aljboqa.alj.com/BOE/portal/2210102313/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" ContentHash="b9Uucop_akGk6241LtUfVg" DesignTimeRectangle="996, 238, 12, 18" DesignTimeScaleFactor="0.75" FriendlyName="'005A_SearchButton'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.ui.core.Icon' ui5p-src='sap-icon://search' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.ui.core.Icon' ui5p-src='sap-icon://search' tag='SPAN' type='' class='sapUiIcon sapMBtnCustomIcon sapMBtnIcon sapMBtnIconLeft' aaname='' /&gt;" Guid="51c73360-9895-4dac-996c-cd8a398b8a42" InformativeScreenshot="9e09ef39f2044a6ca1e32a2f23addadd.png" Reference="Fv2nvoLrq0eKUR-rLQM7hA/SoTVaTlUt06rX1mVln7GNQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                                </uix:NClick.Target>
+                              </uix:NClick>
+                              <uix:NClick ClickType="Single" DisplayName="Click '005B_SearchResult'" sap:VirtualizedContainerService.HintSize="338,158" sap2010:WorkflowViewState.IdRef="NClick_22" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2a9e65b7-49dd-4238-8070-6bff257e81e4" Version="V3">
+                                <uix:NClick.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://aljboqa.alj.com/BOE/portal/2210102313/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" ContentHash="hHFlJggEAUWFHAqHBQqbrQ" DesignTimeRectangle="630, 285, 377, 26" DesignTimeScaleFactor="0.75" FriendlyName="'005B_SearchResult'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.Table' ui5p-mode='SingleSelectLeft' /&gt;&lt;webctrl innertext='{0}' visibleinnertext='{0}' /&gt;&quot;, in_SerchSelectorValue)]" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.Table' ui5p-mode='SingleSelectLeft' /&gt;&lt;webctrl innertext='{0}' visibleinnertext='{0}' tag='TD' type='' class='sapMListTblCell' aaname='' check:text='11' /&gt;&quot;, in_SerchSelectorValue)]" Guid="0ff30860-1c4e-434e-816f-4193f509333b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAX0AAAAeCAYAAADAbs4RAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADnSURBVHhe7dyxqYMAFIVhd3IMx3EPC9vsIA7iDDZib2d5w4OQJhZJ5+N8H5zmgu2PWNic51lmZpaxZt/3MjOzjDUFQAzRBwgi+gBBRB8giOgDBBF9gCCiDxBE9AGC/BT9bduq7/sax/F1ub4BcE9fR/84jhqGoaZpegf+6gbAff38eWdZlo/AX90AuB/RBwgi+gBBRB8giOgDBPk6+uu6Vtd11bbte4/H4+M2z/PrCQDu5uc3fQD+L9EHCCL6AEFEHyCI6AMEEX2AIKIPEET0AYKIPkCQ5u8XCmZmljFv+gBBRB8gRtUTv/g+eB9wbH8AAAAASUVORK5CYII=" InformativeScreenshot="0aa5360e506e176690da24f3cf123a8c.png" Reference="Fv2nvoLrq0eKUR-rLQM7hA/ZldAVmhkUkuMvPUYr6cSig" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                                </uix:NClick.Target>
+                              </uix:NClick>
+                            </Sequence>
+                          </If.Else>
+                        </If>
+                        <Assign DisplayName="Assign Previous Year" sap:VirtualizedContainerService.HintSize="478,62" sap2010:WorkflowViewState.IdRef="Assign_6">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[PreviousYear]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[(Convert.ToInt32(in_CalenderYear)-1).ToString]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="478,53" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                          <ui:CommentOut.Body>
+                            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="540,1248" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <If Condition="[textAttribute.Contains(  PreviousYear)]" DisplayName="If Previous year data is selected" sap:VirtualizedContainerService.HintSize="478,1137" sap2010:WorkflowViewState.IdRef="If_2">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <If.Then>
+                                  <ui:LogMessage DisplayName="Log Message Calender Year already selected" sap:VirtualizedContainerService.HintSize="334,94" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Calender Year already selected&quot;+PreviousYear]" />
+                                </If.Then>
+                                <If.Else>
+                                  <Sequence DisplayName="Select the calender year" sap:VirtualizedContainerService.HintSize="400,858" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <Assign sap2010:Annotation.AnnotationText="In value is the selector variable." DisplayName="Assign in_Value " sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="Assign_5">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:String">[in_SerchSelectorValue]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:String">[PreviousYear]</InArgument>
+                                      </Assign.Value>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </Assign>
+                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '005_Search Field'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,219" sap2010:WorkflowViewState.IdRef="NTypeInto_8" ScopeIdentifier="2a9e65b7-49dd-4238-8070-6bff257e81e4" Text="[PreviousYear]" Version="V3">
+                                      <uix:NTypeInto.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://aljbodev.alj.com/BOE/portal/2210051642/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" ContentHash="UUqG4gA7WEi395j08b9hhg" DesignTimeRectangle="605, 235, 348, 24" DesignTimeScaleFactor="0.75" ElementType="InputBox" FriendlyName="'005_Search Field'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.bi.webi.ui.control.SearchField' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.bi.webi.ui.control.SearchField' tag='DIV' type='' class='sapMSF wingPromptLovSearchField wingTestPromptLovSearchField sapMBarChild sapMTBShrinkItem' aaname='' /&gt;" Guid="720bc80b-a47a-4265-98a3-7c652cf87665" InformativeScreenshot="831109760ca25637961339c532f6bb8c.png" Reference="KLsic7J1QE-Q7h60I_1cQw/Tjl931pN2EqWGE1dP9KiXQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                                      </uix:NTypeInto.Target>
+                                    </uix:NTypeInto>
+                                    <uix:NClick ClickType="Single" DisplayName="Click '005A_SearchButton'" sap:VirtualizedContainerService.HintSize="338,158" sap2010:WorkflowViewState.IdRef="NClick_24" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2a9e65b7-49dd-4238-8070-6bff257e81e4" Version="V3">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://aljboqa.alj.com/BOE/portal/2210102313/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" ContentHash="b9Uucop_akGk6241LtUfVg" DesignTimeRectangle="996, 238, 12, 18" DesignTimeScaleFactor="0.75" FriendlyName="'005A_SearchButton'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.ui.core.Icon' ui5p-src='sap-icon://search' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.ui.core.Icon' ui5p-src='sap-icon://search' tag='SPAN' type='' class='sapUiIcon sapMBtnCustomIcon sapMBtnIcon sapMBtnIconLeft' aaname='' /&gt;" Guid="51c73360-9895-4dac-996c-cd8a398b8a42" InformativeScreenshot="9e09ef39f2044a6ca1e32a2f23addadd.png" Reference="KLsic7J1QE-Q7h60I_1cQw/j56Vqju2NkmpSgiDTeT3Fg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                                      </uix:NClick.Target>
+                                    </uix:NClick>
+                                    <uix:NClick ClickType="Single" DisplayName="Click '005B_SearchResult'" sap:VirtualizedContainerService.HintSize="338,158" sap2010:WorkflowViewState.IdRef="NClick_23" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2a9e65b7-49dd-4238-8070-6bff257e81e4" Version="V3">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://aljboqa.alj.com/BOE/portal/2210102313/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" ContentHash="hHFlJggEAUWFHAqHBQqbrQ" DesignTimeRectangle="630, 285, 377, 26" DesignTimeScaleFactor="0.75" FriendlyName="'005B_SearchResult'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.Table' ui5p-mode='SingleSelectLeft' /&gt;&lt;webctrl innertext='{0}' visibleinnertext='{0}' /&gt;&quot;, in_SerchSelectorValue)]" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.Table' ui5p-mode='SingleSelectLeft' /&gt;&lt;webctrl innertext='{0}' visibleinnertext='{0}' tag='TD' type='' class='sapMListTblCell' aaname='' check:text='11' /&gt;&quot;, in_SerchSelectorValue)]" Guid="0ff30860-1c4e-434e-816f-4193f509333b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAX0AAAAeCAYAAADAbs4RAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADnSURBVHhe7dyxqYMAFIVhd3IMx3EPC9vsIA7iDDZib2d5w4OQJhZJ5+N8H5zmgu2PWNic51lmZpaxZt/3MjOzjDUFQAzRBwgi+gBBRB8giOgDBBF9gCCiDxBE9AGC/BT9bduq7/sax/F1ub4BcE9fR/84jhqGoaZpegf+6gbAff38eWdZlo/AX90AuB/RBwgi+gBBRB8giOgDBPk6+uu6Vtd11bbte4/H4+M2z/PrCQDu5uc3fQD+L9EHCCL6AEFEHyCI6AMEEX2AIKIPEET0AYKIPkCQ5u8XCmZmljFv+gBBRB8gRtUTv/g+eB9wbH8AAAAASUVORK5CYII=" InformativeScreenshot="0aa5360e506e176690da24f3cf123a8c.png" Reference="KLsic7J1QE-Q7h60I_1cQw/BZbzu6Dp5kKNh7LSB0MHjQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                                      </uix:NClick.Target>
+                                    </uix:NClick>
+                                  </Sequence>
+                                </If.Else>
+                              </If>
+                            </Sequence>
+                          </ui:CommentOut.Body>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:CommentOut>
+                      </Sequence>
+                    </uix:NCheckState.IfExists>
+                    <uix:NCheckState.IfNotExists>
+                      <Sequence DisplayName="Calender label  does not appear" sap:VirtualizedContainerService.HintSize="400,207" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="Log Message Calender label  does not appear" sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="LogMessage_17" Level="Info" Message="[&quot;Calender label  does not appear&quot;]" />
+                      </Sequence>
+                    </uix:NCheckState.IfNotExists>
+                    <uix:NCheckState.Target>
+                      <uix:TargetAnchorable BrowserURL="https://aljbodev.alj.com/BOE/portal/2210051642/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" ContentHash="QD5tPLprnUGl3oSdDHObjQ" DesignTimeRectangle="385, 573, 216, 25" DesignTimeScaleFactor="0.75" FriendlyName="'003B_Enter values for Calendar Year'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.VBox' innertext='Enter value(s) for Calendar Year*' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.VBox' innertext='Enter value(s) for Calendar Year*' tag='DIV' type='' class='sapMFlexBox sapMVBox sapMFlexBoxJustifyStart sapMFlexBoxAlignItemsStart sapMFlexBoxWrapNoWrap sapMFlexBoxAlignContentStretch sapWiseSummaryItemContainer sapMFlexItemAlignAuto sapMFlexBoxBGTransparent sapMFlexItem' aaname='' check:text='Enter value(s) for Calendar Year(2)2021; 2022' /&gt;" Guid="10554f61-7ba9-479c-9dc5-d2aaf0a04e6f" InformativeScreenshot="a56f484cff785304f8d48faa91698a16.png" Reference="Fv2nvoLrq0eKUR-rLQM7hA/t4uCdRbpikWbkhXhfOS-Ew" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                    </uix:NCheckState.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NCheckState>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Enter values for Calendar Year'does not appear" sap:VirtualizedContainerService.HintSize="400,207" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message Enter values for Calendar Year not appeared" sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="LogMessage_15" Level="Info" Message="[&quot;Enter values for Calendar Year' not present in the Prompt&quot;]" />
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://aljbodev.alj.com/BOE/portal/2210051642/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" ContentHash="QD5tPLprnUGl3oSdDHObjQ" DesignTimeRectangle="385, 573, 216, 25" DesignTimeScaleFactor="0.75" FriendlyName="'003B_Enter values for Calendar Year'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.VBox' innertext='Enter value(s) for Calendar Year*' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.VBox' innertext='Enter value(s) for Calendar Year*' tag='DIV' type='' class='sapMFlexBox sapMVBox sapMFlexBoxJustifyStart sapMFlexBoxAlignItemsStart sapMFlexBoxWrapNoWrap sapMFlexBoxAlignContentStretch sapWiseSummaryItemContainer sapMFlexItemAlignAuto sapMFlexBoxBGTransparent sapMFlexItem' aaname='' check:text='Enter value(s) for Calendar Year(2)2021; 2022' /&gt;" Guid="10554f61-7ba9-479c-9dc5-d2aaf0a04e6f" InformativeScreenshot="a56f484cff785304f8d48faa91698a16.png" Reference="Fv2nvoLrq0eKUR-rLQM7hA/t4uCdRbpikWbkhXhfOS-Ew" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+              </uix:NCheckState.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheckState>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Run Button'" sap:VirtualizedContainerService.HintSize="1370,157" sap2010:WorkflowViewState.IdRef="NClick_27" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2a9e65b7-49dd-4238-8070-6bff257e81e4" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://aljbodev.alj.com/BOE/portal/2210051642/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" ContentHash="MS6wrb5Hv0GueWpxu_aNyg" DesignTimeRectangle="936, 614, 31, 24" DesignTimeScaleFactor="0.75" ElementType="Button" FriendlyName="'Run Button'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-tooltip='Refresh the document using the prompts values' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-tooltip='Refresh the document using the prompts values' tag='BUTTON' type='' class='sapMBtnBase sapMBtn sapMBtnInverted wingTestDocumentPromptsSummaryRunAction sapMBarChild' aaname='Refresh the document using the prompts values' check:text='RunRefresh the document using the prompts values' /&gt;" Guid="6f40f8ac-6015-4955-a9bb-defb55a02791" InformativeScreenshot="551d1872200e0a889ab0d914b43297d2.png" Reference="Fv2nvoLrq0eKUR-rLQM7hA/lDoI7y3BQ02hq2VJ2AXEEg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <ui:LogMessage DisplayName="Log Message Executed Query by clicking Run " sap:VirtualizedContainerService.HintSize="1370,92" sap2010:WorkflowViewState.IdRef="LogMessage_20" Level="Info" Message="[&quot;Executed Query by clicking Run &quot;]" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" ContentHash="CYM-DeV39U-6aBNEYuljAQ" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHESURBVDhPjZK9axRBGMYHG4ugWMfKv8B0YmGf1jRaSDRgodjoQbSyMkELQdIYQcRSsREMFiqIbSBgYZWg+HXk2CS3l9uPudnbj5/vzO4m63HGDPx43533eZ7dnV112LUyMUFNtXW41TSO4gRAS9DC2FWLWV0tN6SOBvzXfBAqL6AoCnIHVS37pnDcE1jUi08elx+u8+zdFl87hkycWZa72hT+MyAX4Tcxzi61Uec3ON36xdMPfRIJ8ZeXDwywc2WSDJNmcsecz99Tpu70UBd9Tsz5fwWMwx1ibFJiMxRSBhLWjQqm7uao2RR1SbuQ0aB6zwUEOiHQQ0LB9rb6EjJ5E45eBXUFbjwf7JksVuPMdvUiw65ga933Y8PCG5i8Bcevw5E5ZJbszW2t7ErtBAO6gcHVfoX0jz/m8ipwah6OXaOcV9i+siu1tavxBFub3H5VcPYeLuSkvI7VeL24nPf0fkDHj+h0Sza7Mfb69Zph+lHBuftwZgEWV5B5zKYvc6eL9gPa26Fu74T8Ft5/0Tx4m8ihGWaWMi48gZfy+e2hOc12TaQru1I/vaAlJD+8wD1iOBiWP4ys1P5MocHOGlhtq3Qr9QdJ36nDW6DRVAAAAABJRU5ErkJggg==" InformativeScreenshot="76c94f92b6fe892f309476ad34afc09b.jpg" Reference="Fv2nvoLrq0eKUR-rLQM7hA/dDbZE8FisEOCSdoQMYjf9Q" Selector="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" Url="[in_SAPBIUrl]" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <ui:LogMessage DisplayName="Log Message SAP_BI_Report_Download : End" sap:VirtualizedContainerService.HintSize="1466,92" sap2010:WorkflowViewState.IdRef="LogMessage_22" Level="Info" Message="[&quot;SAP_BI_Report_Download : End&quot;]" />
+  </Sequence>
+</Activity>

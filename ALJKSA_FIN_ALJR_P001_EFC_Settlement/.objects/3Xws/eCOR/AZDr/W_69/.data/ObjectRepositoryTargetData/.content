@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="owpJoBPaTUmFlAq8CP2Nxg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="470, 434, 88, 26" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Save' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Save' check:text='unchecked' /&gt;" Guid="9a1b54fb-3c7b-419e-b567-eb81c43ed628" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFwAAAAeCAYAAAChf3k/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFKSURBVGhD7ZbBkcMgDEXpiW6oZG+0QitUsWd34A60kg2JFLMzO5NEgdl/eBPLyJeH+CTs+07ADwh3BsKdMcLD1zd4A8axKQbN4HmMY1O0hm3bwAuAcGcg3BkIdwbCnZlfeEkUQmgkKqOehZhbeM0UtWSuc1HrCzK3cJnumKmO1hZlbuFbocRREnO9rJXUY4ZJhd9VyjFQ0idAb9hxWj4fTZMLF06RIsrIvCGbEilXfhbBh/xzTTbl/Eb1yBr3jTbRgwWEN9qE3qSby7TLFLF9evl5ON0NtTGerCOcqTmeosxlKifgPr3SI9Pbf49vTf9nmVt44X8lPQZatBwSL9ms4kLqmHi6teDf7wJv5hbeRF1j4J7r4ZCrhPe1x8h4jBVEyv8Awp2BcGcg3BkIdwbCnfmzcPBajGNTDJrB8xjHugDvB8KdgXBXdvoBtsHYGrTo71oAAAAASUVORK5CYII=" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Save As' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="a4747d29d45db66822ac66d8cda1560b.png" xmlns="">0GWwudxNCxUiA8REBw0wzkA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

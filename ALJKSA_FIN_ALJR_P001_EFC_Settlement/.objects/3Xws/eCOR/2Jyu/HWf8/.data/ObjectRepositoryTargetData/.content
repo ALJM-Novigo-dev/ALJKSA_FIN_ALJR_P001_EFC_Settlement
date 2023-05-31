@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="hIZX-_wuzE2oTE-UKyOPpQ" Reference="Fv2nvoLrq0eKUR-rLQM7hA/HWf8Xjl-C0m3_IBBbUCGGw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://aljboqa.alj.com/BOE/portal/2210102313/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" DesignTimeRectangle="513, 79, 98, 48" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'FoldersBI Launch Pad'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-tooltip='BI Launch Pad' innertext='FoldersBI Launch Pad' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-tooltip='BI Launch Pad' innertext='FoldersBI Launch Pad' tag='BUTTON' type='' class='sapMBtnBase sapMBtn sapUiSizeCompact BILP-docPopupIcon BILP-popOverBox BILP-launchpadLabel BILP-bordershadow1 sapMBarChild' aaname='BI Launch Pad' check:text='FoldersBI Launch Pad' /&gt;" Guid="33ee9a6f-dd03-458b-9077-f305f1b7a24b" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="61b9141c0f56bb1c2c8f92c0ad129bb9.png" xmlns="">0AA9GYkgIA0mRyREPKAQjoQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

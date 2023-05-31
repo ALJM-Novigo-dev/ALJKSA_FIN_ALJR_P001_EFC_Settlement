@@ -1,0 +1,252 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="_002A_BIReportSearch_Folder" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_SAPURL" Type="InArgument(x:String)" />
+    <x:Property Name="ReportYear" Type="InArgument(x:String)" />
+    <x:Property Name="ReportName" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1064,2237</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>_002A_BIReportSearch_Folder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="74">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="_002A_BIReportSearch_Folder" sap:VirtualizedContainerService.HintSize="1074,2172" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="BI Report Through Folders" sap:VirtualizedContainerService.HintSize="1012,2061" sap2010:WorkflowViewState.IdRef="Sequence_7">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:LogMessage DisplayName="Log Message SAP BI Report Search Start" sap:VirtualizedContainerService.HintSize="950,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;SAP BI Report Search : Start&quot;]" />
+      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="005_BI_Inbox_Page" sap:VirtualizedContainerService.HintSize="950,1818" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="4f3cdaa2-4ac8-4cf9-920e-02adbeb0ef3d" Version="V2">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="916,1601" sap2010:WorkflowViewState.IdRef="Sequence_6">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NClick ClickType="Single" DisplayName="Click '003_Folder'" sap:VirtualizedContainerService.HintSize="854,193" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4f3cdaa2-4ac8-4cf9-920e-02adbeb0ef3d" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://aljboqa.alj.com/BOE/portal/2210102313/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" ContentHash="rqGBu0YMX0SPMiQqFVGAww" DesignTimeRectangle="56, 199, 176, 176" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'003_Folder'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl id='Folders' innertext='Folders' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl id='Folders' innertext='Folders' tag='DIV' type='' class='sapMGT sapMGTStateLoaded sapMGTScopeDisplay OneByOne sapMPointer sapUiTinyMarginBegin sapUiTinyMarginTop footertext' aaname='' check:text='Folders' /&gt;" Guid="f2b3ee00-235d-4dc4-9dee-5b4bc523ef62" InformativeScreenshot="e1c6294ab5b304c021e9503d21ab34f1.png" Reference="Fv2nvoLrq0eKUR-rLQM7hA/K-IdxuFvUkqE3jCFWw790w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                </uix:NClick.Target>
+                <uix:NClick.VerifyOptions>
+                  <uix:VerifyExecutionOptions DisplayName="Button '001_MyInboxBILaunchPad'" Mode="Appears">
+                    <uix:VerifyExecutionOptions.Retry>
+                      <InArgument x:TypeArguments="x:Boolean" />
+                    </uix:VerifyExecutionOptions.Retry>
+                    <uix:VerifyExecutionOptions.Target>
+                      <uix:TargetAnchorable BrowserURL="https://aljbodev.alj.com/BOE/portal/2210051642/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" ContentHash="E_iMViE_CkeLN_C2E3Y7AQ" DesignTimeRectangle="513, 79, 111, 48" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'001_MyInboxBILaunchPad'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-tooltip='BI Launch Pad' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-tooltip='BI Launch Pad' tag='BUTTON' type='' class='sapMBtnBase sapMBtn sapUiSizeCompact BILP-docPopupIcon BILP-popOverBox BILP-launchpadLabel BILP-bordershadow1 sapMBarChild' aaname='BI Launch Pad' check:innerText='My Inbox' /&gt;" Guid="4a6d8ba4-cf71-47fd-8bae-80c62f66c173" InformativeScreenshot="cff0251110bbd72cd6586f836fa3cb64.png" Reference="Fv2nvoLrq0eKUR-rLQM7hA/4GS5VmP04U6Qc79BiRtm2A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                    </uix:VerifyExecutionOptions.Target>
+                    <uix:VerifyExecutionOptions.Timeout>
+                      <InArgument x:TypeArguments="x:Double" />
+                    </uix:VerifyExecutionOptions.Timeout>
+                  </uix:VerifyExecutionOptions>
+                </uix:NClick.VerifyOptions>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NClick>
+              <uix:NCheckState DisplayName="Check App State 'FoldersBI Launch Pad'" sap:VirtualizedContainerService.HintSize="854,424" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="4f3cdaa2-4ac8-4cf9-920e-02adbeb0ef3d" Version="V3">
+                <uix:NCheckState.IfExists>
+                  <Sequence DisplayName="Folder appears" sap:VirtualizedContainerService.HintSize="400,207" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:LogMessage DisplayName="Log Message Loaded BI Lunch Pad " sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Loaded BI Folder Lunch Pad &quot;]" />
+                  </Sequence>
+                </uix:NCheckState.IfExists>
+                <uix:NCheckState.IfNotExists>
+                  <Sequence DisplayName="Folder does not appear" sap:VirtualizedContainerService.HintSize="400,205" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Throw DisplayName="Throw BI Lunch Pad doesnot appear" Exception="[new SystemException(&quot;BI Folder Launch Pad did not appear &quot;)]" sap:VirtualizedContainerService.HintSize="338,90" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                  </Sequence>
+                </uix:NCheckState.IfNotExists>
+                <uix:NCheckState.Target>
+                  <uix:TargetAnchorable BrowserURL="https://aljboqa.alj.com/BOE/portal/2210102313/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" ContentHash="hIZX-_wuzE2oTE-UKyOPpQ" DesignTimeRectangle="513, 79, 98, 48" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'FoldersBI Launch Pad'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-tooltip='BI Launch Pad' innertext='FoldersBI Launch Pad' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-tooltip='BI Launch Pad' innertext='FoldersBI Launch Pad' tag='BUTTON' type='' class='sapMBtnBase sapMBtn sapUiSizeCompact BILP-docPopupIcon BILP-popOverBox BILP-launchpadLabel BILP-bordershadow1 sapMBarChild' aaname='BI Launch Pad' check:text='FoldersBI Launch Pad' /&gt;" Guid="33ee9a6f-dd03-458b-9077-f305f1b7a24b" InformativeScreenshot="61b9141c0f56bb1c2c8f92c0ad129bb9.png" Reference="Fv2nvoLrq0eKUR-rLQM7hA/HWf8Xjl-C0m3_IBBbUCGGw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                </uix:NCheckState.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NCheckState>
+              <uix:NCheckState DisplayName="Check App State 'Report Name'" sap:VirtualizedContainerService.HintSize="854,424" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="4f3cdaa2-4ac8-4cf9-920e-02adbeb0ef3d" Version="V3">
+                <uix:NCheckState.IfExists>
+                  <Sequence DisplayName="Report appears" sap:VirtualizedContainerService.HintSize="400,207" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:LogMessage DisplayName="Log Message  - Report is available" sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[ReportName + &quot;is available &quot;]" />
+                  </Sequence>
+                </uix:NCheckState.IfExists>
+                <uix:NCheckState.IfNotExists>
+                  <Sequence DisplayName="Report does not appear" sap:VirtualizedContainerService.HintSize="400,205" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Throw DisplayName="Throw BI Lunch Pad doesnot appear" Exception="[new SystemException(  ReportName+ ReportYear+&quot; is not available &quot;)]" sap:VirtualizedContainerService.HintSize="338,90" sap2010:WorkflowViewState.IdRef="Throw_2" />
+                  </Sequence>
+                </uix:NCheckState.IfNotExists>
+                <uix:NCheckState.Target>
+                  <uix:TargetAnchorable BrowserURL="https://aljboqa.alj.com/BOE/portal/2210102313/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" ContentHash="AjcxvXR2mEm8L2lyFeXNqA" DesignTimeRectangle="308, 288, 122, 32" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Report Name'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.ui.table.Table' /&gt;&lt;webctrl ui5-colLabel='Title' innertext='ALJR Finance - EFC Sales Report*' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.ui.table.Table' /&gt;&lt;webctrl ui5-colLabel='Title' innertext='ALJR Finance - EFC Sales Report 2022 New : 80250138 : 4073345' tag='DIV' type='' class='sapUiHLayout sapUiHLayoutNoWrap BILP-HorizontalLayoutWidth' aaname='' check:text='ALJR Finance - EFC Sales Report 2022 New : 80250138 : 4073345' /&gt;" Guid="65a366ec-36ad-4a7a-b433-6afa53ebe9f4" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAH4AAAAkCAYAAABPNo4ZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAS+SURBVHhe7ZxPi9tGGIf3I/Qj9JqzIKCTL9mTL8Enn3TakwIFn5yLT7qJHszeCiYU9SQoGFpcKL4UkxRBi6CsoMWUpiLZaNtE4FahKXv59Z3RH4+k0cZeu6wdzcIDK70zI3kezfuOvLAnUD+t/Dm5vLyEon2cXF9fQ9E+lPiWosS3FCW+pSjxLUWJbyk3in/6yxW+ePrbxsjGUBwmjeJF6bJ4FSX+uJCKr650WZsqSvxxURMvS+/VNjJ2ER9NTWiaBmuRVGI+bDpv++K5Jspt8zHX6Dg1LEyDuNJvTb1PCh8z9uGOZwiSer9jpCS+qaaLbZrYtF2dEK7RhWUNoVkLJKXYjuLPXARxjJgTwp+Y0DUT06jat6lPCr+npYOePsQ8rvc7Rkriq8JzxDZNbNquxtJFv+9imSxgadWJ3VG8OUVUahNieqbBnEXCuTXyPh8mNfHi8Tbctm8w6aLvLun3BAtLw2AmpuL/Sfz0FuKjKUzNhs+P2bUoc3hzWEaHlwO9P8I8XLePPAfDLKZ1DFjzsIj5NrsHD3PLQIfF9T5GQpyXlWEeO4VhzRAKMWfQS2OdHgZOUMmSm3HH4gNMun24y/Q48SzogxniIr5P8QnChYWeZsAVBInwPmxCS2SloSZeR2dAZSFKkCQhSexCG87Te098TMxRsZ9IKKuZwnWZeL0zgBtE1Jfua26hW2S7JZU+DT0qeyHbTyRLzEYjmiO2/2ExHaYbpNeJAzgmHTdksJu4W/HBBF2W5vPjxIOlizV4R/ElgQStPHvRPEm8T1ONl4gv3Zdv0+ocZ/EqEabm+t64eNsX4ul4YxZnc6JZWMg2kTxmwxPOJfQwa+Zs6/J0p+J9W6/LIQw3T3s7ii8kLmniO5RehXQqoZ4lBGSpXtwkMvFFPILnDHHWy1J9hii+XG6Ee2fjGO46tYvwa5TnKiW/rkg6Zt6mOod7E/+1/0J6vhG+uvtw/PLqiijt6cUH30a8R22zVUPHNYkhE0eyGtI8Y1/i4zm9ofRoZVIZSOP1Fd8ofssVf1v2Jn5beIoS03wO393n9TCdEGtRfjjimCY0onbGGcZeSMchvLEBvUsTn02YTOLSNfg56Woi9iU+mtE4hpO98+d7iw3Fl2o87R/osy1skx7odY03xl5W/9nnHsD2qt9/vJ+dxf9LIt4+e8aRxZuYD7VsN1+Npbv7NJZOSDmtEZmccGbBOE3LRYd9OcM3QOk4com0meyxUiK77v7EXyds03UKnd0r7cpNZwaH3ibyL6huFk+IO3e+q5/S6+46Vt7xT6mcZbEtaBT/6Y9XGH3/CpOL1/jh1d/FeZF/Li4Q3b+Py3v3OH88fMgfBFlbxWFx44r/M3nHxX/8+c+cT757geWbt0X86sGDQnpO/PhxaQzFYbJxqmcZ4OT8J47x7e/8oahKZ7w2DGl/xWGxVY1nKT+XzzKBbMW/efRI2ldxWGy9uWPpnolnqf/lV9+UpLN6z+q+rJ/isNhafDXlv3v+HKvzc/z15Ina2B0RNfEi7M+0Ypyl+o8+Cwrx7CEQ44rjoSReBpPN6jlb3Ux258tfebpvesVTHAfvFa/4MFHiW4oS31KU+JaixLcU9Y8RWsrJarWCom2s8B+3ZuhKli5loAAAAABJRU5ErkJggg==" InformativeScreenshot="f1116e82933faeda64c2e3ea785ddd80.png" Reference="Fv2nvoLrq0eKUR-rLQM7hA/xtkDQX0VdUe2qFZ_PwsPDw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                </uix:NCheckState.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NCheckState>
+              <uix:NClick ClickType="Double" DisplayName="Click 'Report Name'" sap:VirtualizedContainerService.HintSize="854,193" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4f3cdaa2-4ac8-4cf9-920e-02adbeb0ef3d" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://aljboqa.alj.com/BOE/portal/2210102313/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" ContentHash="AjcxvXR2mEm8L2lyFeXNqA" DesignTimeRectangle="308, 288, 122, 32" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Report Name'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.ui.table.Table' /&gt;&lt;webctrl ui5-colLabel='Title' innertext='ALJR Finance - EFC Sales Report*' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.ui.table.Table' /&gt;&lt;webctrl ui5-colLabel='Title' innertext='ALJR Finance - EFC Sales Report 2022 New : 80250138 : 4073345' tag='DIV' type='' class='sapUiHLayout sapUiHLayoutNoWrap BILP-HorizontalLayoutWidth' aaname='' check:text='ALJR Finance - EFC Sales Report 2022 New : 80250138 : 4073345' /&gt;" Guid="65a366ec-36ad-4a7a-b433-6afa53ebe9f4" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAH4AAAAkCAYAAABPNo4ZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAS+SURBVHhe7ZxPi9tGGIf3I/Qj9JqzIKCTL9mTL8Enn3TakwIFn5yLT7qJHszeCiYU9SQoGFpcKL4UkxRBi6CsoMWUpiLZaNtE4FahKXv59Z3RH4+k0cZeu6wdzcIDK70zI3kezfuOvLAnUD+t/Dm5vLyEon2cXF9fQ9E+lPiWosS3FCW+pSjxLUWJbyk3in/6yxW+ePrbxsjGUBwmjeJF6bJ4FSX+uJCKr650WZsqSvxxURMvS+/VNjJ2ER9NTWiaBmuRVGI+bDpv++K5Jspt8zHX6Dg1LEyDuNJvTb1PCh8z9uGOZwiSer9jpCS+qaaLbZrYtF2dEK7RhWUNoVkLJKXYjuLPXARxjJgTwp+Y0DUT06jat6lPCr+npYOePsQ8rvc7Rkriq8JzxDZNbNquxtJFv+9imSxgadWJ3VG8OUVUahNieqbBnEXCuTXyPh8mNfHi8Tbctm8w6aLvLun3BAtLw2AmpuL/Sfz0FuKjKUzNhs+P2bUoc3hzWEaHlwO9P8I8XLePPAfDLKZ1DFjzsIj5NrsHD3PLQIfF9T5GQpyXlWEeO4VhzRAKMWfQS2OdHgZOUMmSm3HH4gNMun24y/Q48SzogxniIr5P8QnChYWeZsAVBInwPmxCS2SloSZeR2dAZSFKkCQhSexCG87Te098TMxRsZ9IKKuZwnWZeL0zgBtE1Jfua26hW2S7JZU+DT0qeyHbTyRLzEYjmiO2/2ExHaYbpNeJAzgmHTdksJu4W/HBBF2W5vPjxIOlizV4R/ElgQStPHvRPEm8T1ONl4gv3Zdv0+ocZ/EqEabm+t64eNsX4ul4YxZnc6JZWMg2kTxmwxPOJfQwa+Zs6/J0p+J9W6/LIQw3T3s7ii8kLmniO5RehXQqoZ4lBGSpXtwkMvFFPILnDHHWy1J9hii+XG6Ee2fjGO46tYvwa5TnKiW/rkg6Zt6mOod7E/+1/0J6vhG+uvtw/PLqiijt6cUH30a8R22zVUPHNYkhE0eyGtI8Y1/i4zm9ofRoZVIZSOP1Fd8ofssVf1v2Jn5beIoS03wO393n9TCdEGtRfjjimCY0onbGGcZeSMchvLEBvUsTn02YTOLSNfg56Woi9iU+mtE4hpO98+d7iw3Fl2o87R/osy1skx7odY03xl5W/9nnHsD2qt9/vJ+dxf9LIt4+e8aRxZuYD7VsN1+Npbv7NJZOSDmtEZmccGbBOE3LRYd9OcM3QOk4com0meyxUiK77v7EXyds03UKnd0r7cpNZwaH3ibyL6huFk+IO3e+q5/S6+46Vt7xT6mcZbEtaBT/6Y9XGH3/CpOL1/jh1d/FeZF/Li4Q3b+Py3v3OH88fMgfBFlbxWFx44r/M3nHxX/8+c+cT757geWbt0X86sGDQnpO/PhxaQzFYbJxqmcZ4OT8J47x7e/8oahKZ7w2DGl/xWGxVY1nKT+XzzKBbMW/efRI2ldxWGy9uWPpnolnqf/lV9+UpLN6z+q+rJ/isNhafDXlv3v+HKvzc/z15Ina2B0RNfEi7M+0Ypyl+o8+Cwrx7CEQ44rjoSReBpPN6jlb3Ux258tfebpvesVTHAfvFa/4MFHiW4oS31KU+JaixLcU9Y8RWsrJarWCom2s8B+3ZuhKli5loAAAAABJRU5ErkJggg==" InformativeScreenshot="f1116e82933faeda64c2e3ea785ddd80.png" Reference="Fv2nvoLrq0eKUR-rLQM7hA/xtkDQX0VdUe2qFZ_PwsPDw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                </uix:NClick.Target>
+                <uix:NClick.VerifyOptions>
+                  <uix:VerifyExecutionOptions DisplayName="Element '005A_SearchButton'" Mode="Appears">
+                    <uix:VerifyExecutionOptions.Retry>
+                      <InArgument x:TypeArguments="x:Boolean" />
+                    </uix:VerifyExecutionOptions.Retry>
+                    <uix:VerifyExecutionOptions.Target>
+                      <uix:TargetAnchorable BrowserURL="https://aljboqa.alj.com/BOE/portal/2210102313/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" ContentHash="b9Uucop_akGk6241LtUfVg" DesignTimeRectangle="996, 238, 12, 18" DesignTimeScaleFactor="0.75" FriendlyName="'005A_SearchButton'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.ui.core.Icon' ui5p-src='sap-icon://search' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.ui.core.Icon' ui5p-src='sap-icon://search' tag='SPAN' type='' class='sapUiIcon sapMBtnCustomIcon sapMBtnIcon sapMBtnIconLeft' aaname='' /&gt;" Guid="51c73360-9895-4dac-996c-cd8a398b8a42" InformativeScreenshot="9e09ef39f2044a6ca1e32a2f23addadd.png" Reference="Fv2nvoLrq0eKUR-rLQM7hA/SoTVaTlUt06rX1mVln7GNQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                    </uix:VerifyExecutionOptions.Target>
+                    <uix:VerifyExecutionOptions.Timeout>
+                      <InArgument x:TypeArguments="x:Double" />
+                    </uix:VerifyExecutionOptions.Timeout>
+                  </uix:VerifyExecutionOptions>
+                </uix:NClick.VerifyOptions>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NClick>
+              <ui:LogMessage DisplayName="Log Message SAP BI Report Search : End" sap:VirtualizedContainerService.HintSize="854,92" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;SAP BI Report Search : End&quot;]" />
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" ContentHash="SMgGUthx2kqEDyS2kj2FfA" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHESURBVDhPjZK9axRBGMYHG4ugWMfKv8B0YmGf1jRaSDRgodjoQbSyMkELQdIYQcRSsREMFiqIbSBgYZWg+HXk2CS3l9uPudnbj5/vzO4m63HGDPx43533eZ7dnV112LUyMUFNtXW41TSO4gRAS9DC2FWLWV0tN6SOBvzXfBAqL6AoCnIHVS37pnDcE1jUi08elx+u8+zdFl87hkycWZa72hT+MyAX4Tcxzi61Uec3ON36xdMPfRIJ8ZeXDwywc2WSDJNmcsecz99Tpu70UBd9Tsz5fwWMwx1ibFJiMxRSBhLWjQqm7uao2RR1SbuQ0aB6zwUEOiHQQ0LB9rb6EjJ5E45eBXUFbjwf7JksVuPMdvUiw65ga933Y8PCG5i8Bcevw5E5ZJbszW2t7ErtBAO6gcHVfoX0jz/m8ipwah6OXaOcV9i+siu1tavxBFub3H5VcPYeLuSkvI7VeL24nPf0fkDHj+h0Sza7Mfb69Zph+lHBuftwZgEWV5B5zKYvc6eL9gPa26Fu74T8Ft5/0Tx4m8ihGWaWMi48gZfy+e2hOc12TaQru1I/vaAlJD+8wD1iOBiWP4ys1P5MocHOGlhtq3Qr9QdJ36nDW6DRVAAAAABJRU5ErkJggg==" InformativeScreenshot="5f6f50cada53f4741f500c69684fa93e.jpg" Reference="Fv2nvoLrq0eKUR-rLQM7hA/sRc38kPZJEyQllfH52b6lg" Selector="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" Title="SAP BI Launch Pad" Url="[in_SAPURL]" />
+        </uix:NApplicationCard.TargetApp>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </uix:NApplicationCard>
+    </Sequence>
+  </Sequence>
+</Activity>

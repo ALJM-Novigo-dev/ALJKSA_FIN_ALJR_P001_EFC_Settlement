@@ -1,0 +1,221 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="_006_SAP_BI_Logout" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+  </x:Members>
+  <this:_006_SAP_BI_Logout.in_Config>
+    <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" />
+  </this:_006_SAP_BI_Logout.in_Config>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1002,2108</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>_006_SAP_BI_Logout_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="74">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="_006_SAP_BI_Logout" sap:VirtualizedContainerService.HintSize="1012,2043" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message SAP BI Logout Start" sap:VirtualizedContainerService.HintSize="950,94" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Trace" Message="[&quot;SAP BI Logout : Start&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="950,1664" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="da48d415-4ca1-473b-9e44-d6edd5cf475e" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="916,1446" sap2010:WorkflowViewState.IdRef="Sequence_7">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NCheckState DisplayName="Check App State 'UserAccount'" sap:VirtualizedContainerService.HintSize="854,690" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="da48d415-4ca1-473b-9e44-d6edd5cf475e" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="User appears" sap:VirtualizedContainerService.HintSize="400,471" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ClickType="Single" DisplayName="Click 'UserAccount'" sap:VirtualizedContainerService.HintSize="338,158" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="da48d415-4ca1-473b-9e44-d6edd5cf475e" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://aljboqa.alj.com/BOE/portal/2210102313/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" ContentHash="3jCe4WvD9UOtecKFz_u-oA" DesignTimeRectangle="1318, 85, 24, 24" DesignTimeScaleFactor="0.75" ElementType="Button" FriendlyName="'UserAccount'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl id='*' aria-role='button' ui5p-displayShape='Circle' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl id='*' aria-role='button' ui5p-displayShape='Circle' tag='SPAN' type='' class='sapFAvatar sapFAvatarColorAccent6 sapFAvatarXS sapFAvatarInitials sapFAvatarCircle sapMPointer sapFAvatarFocusable sapMBarChild' aaname='' check:text='A' /&gt;" Guid="81be0ed8-3789-4bbf-b272-73f2563310b5" ImageBase64="" InformativeScreenshot="35b61ad742a44bd92babebd79647f619.png" Reference="Fv2nvoLrq0eKUR-rLQM7hA/_l5_hIPLaEOmDc58BAJ15g" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                  <uix:NClick ClickType="Single" DisplayName="Click 'Logout'" sap:VirtualizedContainerService.HintSize="338,158" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="da48d415-4ca1-473b-9e44-d6edd5cf475e" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://aljboqa.alj.com/BOE/portal/2210102313/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" ContentHash="Io4cBWZTH0qUMEQxu7FPsw" DesignTimeRectangle="1230, 260, 136, 36" DesignTimeScaleFactor="0.75" ElementType="ListItem" FriendlyName="'Logout'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.Popover' /&gt;&lt;webctrl ui5-class='sap.m.List' /&gt;&lt;webctrl ui5-type='List Item' ui5p-title='Log out' innertext='Log out' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.Popover' /&gt;&lt;webctrl ui5-class='sap.m.List' /&gt;&lt;webctrl ui5-type='List Item' ui5p-title='Log out' innertext='Log out' tag='LI' type='' class='sapMLIB sapMLIB-CTX sapMLIBShowSeparator sapMLIBTypeActive sapMLIBActionable sapMLIBHoverable sapMLIBFocusable sapMSLI ListItemFontSize StandardListItemRemoveBorder' aaname='' check:text='unchecked' /&gt;" Guid="8fbd8d38-abd2-4eb0-8675-0e538fec187d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIwAAAAoCAYAAAAsTRLGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAVPSURBVHhe7ZnPTxppGMf9nzhx8sbJEzdO3Dxx8ubJk5mEkDmMSpeyLjVx6lhHpSwubrEd11btGup2cWnhsDEkkpjoQWV3a2Lid5935kWwMC0Ibhd5PsmTd95nfkR8vnzf52WGll8fILaUBcN8DU3TMLS8lUfMzMKyLA6OL4YjGHYYpk2kwxzgMTkMw3yNusOwYJg2YIdhOsIWzAo7DNMmDQ6zIVMM486Nw/CSxLQD9zBMR7DDMB3RIJh76GFO96CrYWjJkkww/c79Okxeh6IoUKIZHMsU09/cr8OwYB4cPXaYK5StWahG3pk2CSYPI2pg/9SeMH3IjWDiy906TBUFU4OikSCOr5xUk2CkoJQYskd2gukzbMGsvv6ja4ep7s2RWEyUqjIhcFmSqpRXVQOFTzLRJiepEDwR6V7MN6FHDlOAGdaQLstpDdcepop9nXZPTTd8mf+bYMTfE0qdyNlgIB2mux7mk3CXuT00GYarYIhyGpqaRieScRfMJQ5TkwgOe+DxeOEL6She1k4VoYf88AcC8PuDGA0Ot37GSQ6JkA9eDz1jOIhJq+Lk85Hb19fm9NkCPi+8vgACExYGRTY9cZiSGUY00yQJMh7DXTAokStFke2gAXYTzGVuEt6QCVliVMwQvFTECzouJkbIBeSZSgqhYP26OhWYwRFEcuIO4iKHyIgf+iEduwmGGFiHSb4pIN6Fw+R1BXpzHYkj7CUNZAqNjU2NY2SiUbTSmRtugslr3tuFOyFheCK0JztBKuRB/ZY8Ip4Q1j+v8cm6vL5OPuJxnsmCucVN09uNwxQMBdFOrMKmjLR634IBDnU/grZVCOOI0LKUQNGeNdCJYOgZAy+Ybh3mzIpBaW0x7pxaiCm0U5LTdnATTMslaTJHnY04F0FobByj1MOMjuvItaxvqyUpCFM8sJjASNCEI7kKOZb3lmBGa8vdgOAIhhzm+252SXbx57DXauVxoZzWEDY7kYsUjGhKG8L5htea3mEMUwQnUziUTa9wHzHfzuWQyxVRuah1w58hm15x/7AvhMSNsiqwJgJ2M+wNTMBK1R3mMp9AwCua5MQtd3rI1B1m5aVM3Y2SqSKs79OGuQ2OMogqMVj3/ovvJRnEGCbNFHT6oJoWwXjAC3+iaVFi2mRqako6TJeCEQ1uJqpANfZxJjOtuCpbmFVVapI7sKO7Qr3JmE+7/e2n5csz7uygmM5xBGM7TLevBoirMqxZFYoaQ3LnTxxX5SsCXKF6VIJlRGmbrcH4z14mkcPoY/D7fAhQDxPw++Efi2B7sNqOniIF0wuHqXNW3kFyVoMaVpzfYSjCJCI9k0ftNRPTn9iCed6DHoYZDByH2S701GGYh4vjMNsfMLv6SqYYxp3p6WkhmAILhmkLKRh2GKY9bMGkdj7gh6QlUwzjjhTMRxYM0xa2YH7cLeLJ802ZYhh3ZmZmSDBvi9Azu7j46x+ZZphmzs/PEY/HhcN8RIp2SsvZXZxX/8b19bW8hGFg60HoYn5+HgsLCxha+7UEsSwJ0Txd38WT1Kb9Q97sygbiK1nEl7N4vPQCcfMFjT8jtrSO7xYziD3L4BGN4viRIeInGWuILqw5I0XjvBYzT9OUS2OGwh7lvBZ3PX/X+/r5fOP/1f3/XquNrJesn11Hqqeoq1NfqjPVW9Rd1F/oQOhB6EKIxTAMDKXfllATjXAbsc0W4hHvmJJvDrCydYDVrTxWfhHxO0zrPczN32gUsY+lV/v2+OzlOzp+dzMubuToOMfjNxwb6yHGxnrZ9bPr+N6uq6ivXWeqt6i7qL/QgdCD0IUQy+LiIv4F++E3L3HAae0AAAAASUVORK5CYII=" InformativeScreenshot="0f14adcc28ea03012349089303eb4621.png" Reference="Fv2nvoLrq0eKUR-rLQM7hA/wwSqLZOAlUG6hsACd1E83Q" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="User Account does not appear" sap:VirtualizedContainerService.HintSize="400,338" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message - Account Icon not found" sap:VirtualizedContainerService.HintSize="338,94" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Error" Message="[&quot;Account Icon not found&quot;]" />
+                  <Throw DisplayName="Throw &quot;Account Icon not found&quot;" Exception="[new Exception(&quot;Account Icon not found&quot;)]" sap:VirtualizedContainerService.HintSize="338,91" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://aljboqa.alj.com/BOE/portal/2210102313/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" ContentHash="3jCe4WvD9UOtecKFz_u-oA" DesignTimeRectangle="1318, 85, 24, 24" DesignTimeScaleFactor="0.75" ElementType="Button" FriendlyName="'UserAccount'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl id='*' aria-role='button' ui5p-displayShape='Circle' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl id='*' aria-role='button' ui5p-displayShape='Circle' tag='SPAN' type='' class='sapFAvatar sapFAvatarColorAccent6 sapFAvatarXS sapFAvatarInitials sapFAvatarCircle sapMPointer sapFAvatarFocusable sapMBarChild' aaname='' check:text='A' /&gt;" Guid="81be0ed8-3789-4bbf-b272-73f2563310b5" ImageBase64="" InformativeScreenshot="35b61ad742a44bd92babebd79647f619.png" Reference="Fv2nvoLrq0eKUR-rLQM7hA/_l5_hIPLaEOmDc58BAJ15g" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive" />
+              </uix:NCheckState.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheckState>
+            <uix:NCheckState sap2010:Annotation.AnnotationText="After the successful logout check SAP Login page has appeared or not. &#xA;" DisplayName="Check App State 'Sign in'" sap:VirtualizedContainerService.HintSize="854,601" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="da48d415-4ca1-473b-9e44-d6edd5cf475e" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="SignIn Button appears" sap:VirtualizedContainerService.HintSize="400,209" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message - Logout Successful" sap:VirtualizedContainerService.HintSize="338,94" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;Logout Successful&quot;]" />
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="SignIn Button does not appear" sap:VirtualizedContainerService.HintSize="400,338" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message - Logout Failed" sap:VirtualizedContainerService.HintSize="338,94" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Error" Message="[&quot;Logout Failed&quot;]" />
+                  <Throw DisplayName="Throw Logout Failed" Exception="[new Exception(&quot;Logout Failed&quot;)]" sap:VirtualizedContainerService.HintSize="338,91" sap2010:WorkflowViewState.IdRef="Throw_2">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Throw>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://aljboqa.alj.com/BOE/portal/2210102313/FioriBI/UI5logon.jsp" ContentHash="Hg6iv5yAoUm40CXycp3C3A" DesignTimeRectangle="561, 518, 260, 32" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Sign in'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-role='button' aaname='Sign in' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-role='button' aaname='Sign in' tag='BUTTON' type='' class='sapMBtnBase sapMBtn sapMBtnInverted BILP-button BILP-lsLoginButton' check:text='Sign in' /&gt;" Guid="24436b87-cd1d-4561-aa72-439122091689" InformativeScreenshot="09ef6e0db16ac3dc61fd2136c07edd54.png" Reference="Fv2nvoLrq0eKUR-rLQM7hA/gtC7VAHt60yB1fuVa-sz8g" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+              </uix:NCheckState.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheckState>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" Selector="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" Url="[in_Config(&quot;SAPBIURL&quot;).ToString]" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <ui:LogMessage DisplayName="Log Message SAP BI Logout End" sap:VirtualizedContainerService.HintSize="950,94" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Trace" Message="[&quot;SAP BI Logout End&quot;]" />
+  </Sequence>
+</Activity>

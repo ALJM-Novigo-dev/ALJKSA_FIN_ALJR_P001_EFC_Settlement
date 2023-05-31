@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="dsKJaQsDr0ueHI9ZjLbyEw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://aljbodev.alj.com/BOE/portal/2210051642/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" DesignTimeRectangle="581, 147, 46, 32" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'3Display or'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-tooltip='Display or hide the current prompt answers page' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-tooltip='Display or hide the current prompt answers page' tag='BUTTON' type='' class='sapMBtnBase sapMBtn wingTestPromptLovAnswerCount sapWisePromptLovAnswerCountButton sapMBarChild' aaname='Display or hide the current prompt answers page' check:text='3Display or hide the current prompt answers page' /&gt;" Guid="1c929fd8-cfd6-4b3c-8a56-99c22979cd74" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="334d5e4824cb278eb14ee51d198d6408.png" xmlns="">0iTdcypBxBUWtQBQ13eUqXg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,17 @@
+﻿{
+  "Id": "xtkDQX0VdUe2qFZ_PwsPDw",
+  "Reference": "Fv2nvoLrq0eKUR-rLQM7hA/xtkDQX0VdUe2qFZ_PwsPDw",
+  "ParentRef": "Fv2nvoLrq0eKUR-rLQM7hA/2JyuAsmhf0uEd21WOhYzPw",
+  "Name": "Report Name",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Created": "2023-04-04T05:44:10.3600206Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-05-24T04:53:59.9234737Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=23.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="1oA0a1LeMES2qyd3taO0Xg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://aljbodev.alj.com/BOE/portal/2210051642/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" DesignTimeRectangle="219, 150, 223, 37" DesignTimeScaleFactor="1" ElementType="ListItem" FriendlyName="'checked'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.List' /&gt;&lt;webctrl ui5-type='List Item' innertext='Excel' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.List' /&gt;&lt;webctrl ui5-type='List Item' innertext='Excel' tag='LI' type='' class='sapMLIB sapMLIB-CTX sapMLIBShowSeparator sapMLIBTypeInactive sapMLIBActionable sapMLIBHoverable sapMLIBSelected sapMLIBFocusable sapMCLI sapWingExportMasterListEntry wingTestExportMasterListEntry' aaname='' check:text='checked' /&gt;" Guid="94b067ec-e3d8-4490-906a-4dde69876cd0" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="710696874d1d4c8ab40495fa69cb8dcd.png" xmlns="">0cwoT7WP9c02nnqaDI_sdiw</imageRef>
+    </TargetAnchorable>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

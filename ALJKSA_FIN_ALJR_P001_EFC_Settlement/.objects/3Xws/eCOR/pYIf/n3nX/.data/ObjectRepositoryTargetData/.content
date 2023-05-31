@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="RjNzFoIN9UWKrVEmZev_NQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://aljbodev.alj.com/BOE/portal/2210051642/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" DesignTimeRectangle="819, 147, 87, 32" DesignTimeScaleFactor="1" FriendlyName="'Calendar Year'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.Label' ui5p-text='Calendar Year' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.Label' ui5p-text='Calendar Year' tag='SPAN' type='' class='sapMLabel sapUiSelectable sapMLabelMaxWidth wingPromptLovPromptTitle sapMBarChild' aaname='' check:innerText='Calendar Year' /&gt;" Guid="6daf19e6-d290-4f33-962c-9436eb38cb22" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="51f48eb16bd315e526347aa225b8c754.png" xmlns="">0Cf-Hg1uD20qd5NOEqr3DZw</imageRef>
+    </TargetAnchorable>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

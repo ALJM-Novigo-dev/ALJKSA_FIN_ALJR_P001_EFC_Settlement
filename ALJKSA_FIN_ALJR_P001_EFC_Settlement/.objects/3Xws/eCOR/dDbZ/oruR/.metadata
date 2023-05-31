@@ -1,0 +1,13 @@
+﻿{
+  "Id": "oruRmP0hJUqBfr8G5xcUdA",
+  "Reference": "Fv2nvoLrq0eKUR-rLQM7hA/oruRmP0hJUqBfr8G5xcUdA",
+  "ParentRef": "Fv2nvoLrq0eKUR-rLQM7hA/dDbZE8FisEOCSdoQMYjf9Q",
+  "Name": "003_Signin_Button",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Created": "2023-04-04T05:44:09.568529Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-04-04T05:44:09.568529Z"
+}

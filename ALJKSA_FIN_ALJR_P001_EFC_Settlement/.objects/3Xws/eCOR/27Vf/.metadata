@@ -1,0 +1,16 @@
+﻿{
+  "Id": "27VfwBVWuU6s9E_5jD35Aw",
+  "Reference": "Fv2nvoLrq0eKUR-rLQM7hA/27VfwBVWuU6s9E_5jD35Aw",
+  "ParentRef": "Fv2nvoLrq0eKUR-rLQM7hA/eCORZY0-ek-E5KzfvE6IKQ",
+  "Name": "Folder",
+  "Description": "Selction icon from Home Page to access the report",
+  "Type": "Screen",
+  "Created": "2023-04-04T05:44:10.5295672Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-04-04T05:44:10.5295672Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

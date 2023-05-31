@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="hHFlJggEAUWFHAqHBQqbrQ" Reference="KLsic7J1QE-Q7h60I_1cQw/BZbzu6Dp5kKNh7LSB0MHjQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://aljboqa.alj.com/BOE/portal/2210102313/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" DesignTimeRectangle="630, 285, 377, 26" DesignTimeScaleFactor="0.75" FriendlyName="'11'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.Table' ui5p-mode='SingleSelectLeft' /&gt;&lt;webctrl innertext='{0}' visibleinnertext='{0}' /&gt;&quot;, in_SerchSelectorValue)]" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.Table' ui5p-mode='SingleSelectLeft' /&gt;&lt;webctrl innertext='{0}' visibleinnertext='{0}' tag='TD' type='' class='sapMListTblCell' aaname='' check:text='11' /&gt;&quot;, in_SerchSelectorValue)]" Guid="0ff30860-1c4e-434e-816f-4193f509333b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAX0AAAAeCAYAAADAbs4RAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADnSURBVHhe7dyxqYMAFIVhd3IMx3EPC9vsIA7iDDZib2d5w4OQJhZJ5+N8H5zmgu2PWNic51lmZpaxZt/3MjOzjDUFQAzRBwgi+gBBRB8giOgDBBF9gCCiDxBE9AGC/BT9bduq7/sax/F1ub4BcE9fR/84jhqGoaZpegf+6gbAff38eWdZlo/AX90AuB/RBwgi+gBBRB8giOgDBPk6+uu6Vtd11bbte4/H4+M2z/PrCQDu5uc3fQD+L9EHCCL6AEFEHyCI6AMEEX2AIKIPEET0AYKIPkCQ5u8XCmZmljFv+gBBRB8gRtUTv/g+eB9wbH8AAAAASUVORK5CYII=" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="0aa5360e506e176690da24f3cf123a8c.png" xmlns="">0Ark_7CXTNEeFpGNaiUriWA</imageRef>
+    </TargetAnchorable>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData DefaultValue="11" IsVariable="False" Name="in_SerchSelectorValue" />
+    </scg:List>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

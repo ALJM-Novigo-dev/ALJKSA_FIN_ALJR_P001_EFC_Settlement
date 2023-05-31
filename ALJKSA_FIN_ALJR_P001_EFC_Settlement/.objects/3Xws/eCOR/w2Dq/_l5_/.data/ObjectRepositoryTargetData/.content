@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="3jCe4WvD9UOtecKFz_u-oA" Reference="KLsic7J1QE-Q7h60I_1cQw/rx7BbgR2Vk6yBbrW_eqWDA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://aljboqa.alj.com/BOE/portal/2210102313/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" DesignTimeRectangle="1318, 85, 24, 24" DesignTimeScaleFactor="0.75" ElementType="Button" FriendlyName="'A'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl id='*' aria-role='button' ui5p-displayShape='Circle' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl id='*' aria-role='button' ui5p-displayShape='Circle' tag='SPAN' type='' class='sapFAvatar sapFAvatarColorAccent6 sapFAvatarXS sapFAvatarInitials sapFAvatarCircle sapMPointer sapFAvatarFocusable sapMBarChild' aaname='' check:text='A' /&gt;" Guid="81be0ed8-3789-4bbf-b272-73f2563310b5" ImageBase64="" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="35b61ad742a44bd92babebd79647f619.png" xmlns="">0yp0etCR4TEKV2mheeS0qgw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

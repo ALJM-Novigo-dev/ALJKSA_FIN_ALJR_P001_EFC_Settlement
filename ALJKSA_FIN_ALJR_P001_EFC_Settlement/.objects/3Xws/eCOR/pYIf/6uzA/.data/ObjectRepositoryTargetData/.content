@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="oqIeL0soe0-RYvnLw1C49Q" Reference="KLsic7J1QE-Q7h60I_1cQw/b87YrHeAo0O9N6pYAWNWyw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://aljbodev.alj.com/BOE/portal/2210051642/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" ContentHash="jQLgxmKezUSuysY01qbqLg" DesignTimeRectangle="777, 433, 82, 48" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Continue'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.Button' ui5-role='button' ui5p-text='Continue' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.Button' ui5-role='button' ui5p-text='Continue' tag='BUTTON' type='' class='sapMBtnBase sapMBtn sapMDialogBeginButton sapMBarChild' aaname='Continue' check:innerText='Continue' /&gt;" Guid="e5f58048-927f-48d8-a774-1f8d8e78e148" Reference="KLsic7J1QE-Q7h60I_1cQw/b87YrHeAo0O9N6pYAWNWyw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="80159085a25f6112065fd59566d47ec2.png" xmlns="">0NQOiJTI7SUKUmXmIF4TV9w</imageRef>
+    </TargetAnchorable>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

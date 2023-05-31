@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="LnLXX7Y29UeASUmNNrenqQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://aljbodev.alj.com/BOE/portal/2210051642/FioriBI/UI5logon.jsp" DesignTimeRectangle="604, 208, 174, 38" DesignTimeScaleFactor="1" FriendlyName="'BusinessObjects'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.Label' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.Label' tag='SPAN' type='' class='sapMLabel sapUiSelectable sapMLabelMaxWidth BILP-header' aaname='' check:innerText='BusinessObjects' /&gt;" Guid="308ce7a4-9beb-4a37-9bc3-2de3dfb13f69" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="fb3b519611db775a3ccef0bca6d32744.png" xmlns="">0Q-8j4RGE6kud8shHnMbdqg</imageRef>
+    </TargetAnchorable>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

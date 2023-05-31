@@ -1,0 +1,117 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="_001_SaleReportCreation" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="out_dt_SalesReport" Type="OutArgument(sd:DataTable)" />
+    <x:Property Name="in_dt_EFCSalesReport" Type="InArgument(sd:DataTable)" />
+    <x:Property Name="in_dt_PO" Type="InArgument(sd:DataTable)" />
+    <x:Property Name="in_dt_SegmentSummary" Type="InArgument(sd:DataTable)" />
+  </x:Members>
+  <this:_001_SaleReportCreation.in_dt_PO>
+    <InArgument x:TypeArguments="sd:DataTable" />
+  </this:_001_SaleReportCreation.in_dt_PO>
+  <this:_001_SaleReportCreation.in_dt_SegmentSummary>
+    <InArgument x:TypeArguments="sd:DataTable" />
+  </this:_001_SaleReportCreation.in_dt_SegmentSummary>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>599,736</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>_001_SaleReportCreation_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="39">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="001_SaleReportCreation" sap:VirtualizedContainerService.HintSize="400,671" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message Sales Report Creation : Start" sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Sales Report Creation : Start&quot;]" />
+    <ui:BuildDataTable sap2010:Annotation.AnnotationText="Output Data Table : dt_SalesReport" DataTable="[out_dt_SalesReport]" DisplayName="Build Data Table - SaleReport" sap:VirtualizedContainerService.HintSize="338,91" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Segment&quot; msdata:Caption=&quot;&quot; type=&quot;xs:anyType&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Plant_x0020_Key&quot; msdata:Caption=&quot;&quot; type=&quot;xs:anyType&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Plant_x0020_Name&quot; msdata:Caption=&quot;&quot; type=&quot;xs:anyType&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Brand&quot; msdata:Caption=&quot;&quot; type=&quot;xs:anyType&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Product&quot; msdata:Caption=&quot;&quot; type=&quot;xs:anyType&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Model_x0020_Year&quot; msdata:Caption=&quot;&quot; type=&quot;xs:anyType&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Invoice_x0020_Number&quot; msdata:Caption=&quot;&quot; type=&quot;xs:anyType&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;VIN&quot; msdata:Caption=&quot;&quot; type=&quot;xs:anyType&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Total_x0020_Sales_x0020_Price&quot; msdata:Caption=&quot;&quot; type=&quot;xs:anyType&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Registration_x0020_Fees&quot; msdata:Caption=&quot;&quot; type=&quot;xs:anyType&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Invoice_x0020_Date&quot; msdata:Caption=&quot;&quot; type=&quot;xs:anyType&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Sales_x0020_document&quot; msdata:Caption=&quot;&quot; type=&quot;xs:anyType&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Customer&quot; msdata:Caption=&quot;&quot; type=&quot;xs:anyType&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Customer_x0020_Name&quot; msdata:Caption=&quot;&quot; type=&quot;xs:anyType&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Customer_x0020_group&quot; msdata:Caption=&quot;&quot; type=&quot;xs:anyType&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:anyType&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Billing_x0020_document&quot; msdata:Caption=&quot;&quot; type=&quot;xs:anyType&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Sales_x0020_Office&quot; msdata:Caption=&quot;&quot; type=&quot;xs:anyType&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Division&quot; msdata:Caption=&quot;&quot; type=&quot;xs:anyType&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Sales_x0020_group&quot; msdata:Caption=&quot;&quot; type=&quot;xs:anyType&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Billing_x0020_Type&quot; msdata:Caption=&quot;&quot; type=&quot;xs:anyType&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Distribution_x0020_Channel&quot; msdata:Caption=&quot;&quot; type=&quot;xs:anyType&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Model_x0020_Code&quot; msdata:Caption=&quot;&quot; type=&quot;xs:anyType&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;ALJ_x0020_Suffix&quot; msdata:Caption=&quot;&quot; type=&quot;xs:anyType&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Long_x0020_Description&quot; msdata:Caption=&quot;&quot; type=&quot;xs:anyType&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Exterior_x0020_Color&quot; msdata:Caption=&quot;&quot; type=&quot;xs:anyType&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;DBM&quot; msdata:Caption=&quot;&quot; type=&quot;xs:anyType&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Purchase_x0020_Order&quot; msdata:Caption=&quot;&quot; type=&quot;xs:anyType&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Profit_x0020_Center&quot; msdata:DataType=&quot;System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e&quot; msdata:Caption=&quot;&quot; type=&quot;xs:anyType&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:BuildDataTable>
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="'in_dt_EFCSalesReport.AsEnumerable.ToList.ForEach(Sub(row)&#xD;&#xA;'row out_dt_SalesReport.AsEnumerable&#xD;&#xA;try&#xD;&#xA;Dim sourceTable As DataTable = DirectCast(in_dt_EFCSalesReport, DataTable)&#xD;&#xA;Dim destinationTable As DataTable = DirectCast(out_dt_SalesReport, DataTable)&#xD;&#xA;Dim newTable As DataTable = DirectCast(in_dt_PO, DataTable)&#xD;&#xA;Dim SummaryTable As DataTable = DirectCast(in_dt_SegmentSummary, DataTable)&#xD;&#xA;&#xD;&#xA;For Each row As DataRow In sourceTable.Rows&#xD;&#xA;    Dim newRow As DataRow = destinationTable.NewRow()&#xD;&#xA;    newRow(&quot;Segment&quot;) = row(&quot;Segment&quot;)&#xD;&#xA;    newRow(&quot;Plant Key&quot;) = row(&quot;Plant - Key&quot;)&#xD;&#xA;&#x9;newRow(&quot;Plant Name&quot;) = row(&quot;Plant&quot;)&#xD;&#xA;&#x9;newRow(&quot;Brand&quot;) = row(&quot;Vehicle Data - Brand (Key)&quot;)&#xD;&#xA;&#x9;newRow(&quot;Product&quot;) = row(&quot;Vehicle Data - Product (Key)&quot;)&#xD;&#xA;&#x9;newRow(&quot;Model Year&quot;) = row(&quot;Vehicle Data - Model Year (Key)&quot;)&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;Dim concatenatedValue As String = &quot;DBM&quot; &amp; row(&quot;Sales document&quot;).ToString() &amp; &quot;-0001&quot;&#xD;&#xA;    newRow(&quot;DBM&quot;) = concatenatedValue&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;newRow(&quot;Invoice Number&quot;) = row(&quot;Reference Document Number (XBLNR)&quot;)&#xD;&#xA;&#x9;newRow(&quot;VIN&quot;) = row(&quot;Vehicle Data - Vehicle Identification Number (Key)&quot;)&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;'Vlookup &#xD;&#xA;&#x9;Dim PurchaseOrder = (From prow In in_dt_PO.AsEnumerable&#xD;&#xA;                                Where prow(&quot;Order&quot;).ToString = row(&quot;Sales document&quot;).ToString&#xD;&#xA;                                Select prow(&quot;Purchase Order no.&quot;)&#xD;&#xA;                               ).FirstOrDefault()&#xD;&#xA;&#x9;newRow(&quot;Purchase Order&quot;) = PurchaseOrder&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;newRow(&quot;Total Sales Price&quot;) = row(&quot;Total Sales Price (Incl. VAT)&quot;)&#xD;&#xA;&#x9;newRow(&quot;Registration Fees&quot;) = row(&quot;ZVRZ - Registration Fees&quot;)&#xD;&#xA;&#x9;newRow(&quot;Invoice Date&quot;) = row(&quot;Billing doc. date&quot;)&#xD;&#xA;&#x9;newRow(&quot;Sales document&quot;) = row(&quot;Sales document&quot;)&#xD;&#xA;&#x9;newRow(&quot;Customer&quot;) = row(&quot;Sold-to party - Key&quot;)&#xD;&#xA;&#x9;newRow(&quot;Customer Name&quot;) = row(&quot;Sold-to party&quot;)&#xD;&#xA;&#x9;newRow(&quot;Customer group&quot;) = row(&quot;Customer group&quot;)&#xD;&#xA;&#x9;newRow(&quot;Count&quot;) = row(&quot;Count&quot;)&#xD;&#xA;&#x9;newRow(&quot;Billing document&quot;) = row(&quot;Billing document&quot;)&#xD;&#xA;&#x9;newRow(&quot;Sales Office&quot;) = row(&quot;Sales Office&quot;)&#xD;&#xA;&#x9;newRow(&quot;Division&quot;) = row(&quot;Division&quot;)&#xD;&#xA;&#x9;newRow(&quot;Sales group&quot;) = row(&quot;Sales group&quot;)&#xD;&#xA;&#x9;newRow(&quot;Billing Type&quot;) = row(&quot;Billing Type&quot;)&#xD;&#xA;&#x9;newRow(&quot;Distribution Channel&quot;) = row(&quot;Distribution Channel&quot;)&#xD;&#xA;&#x9;newRow(&quot;Model Code&quot;) = row(&quot;Vehicle Data - Model Code (Key)&quot;)&#xD;&#xA;&#x9;newRow(&quot;ALJ Suffix&quot;) = row(&quot;Vehicle Data - ALJ Suffix (Key)&quot;)&#xD;&#xA;&#x9;newRow(&quot;Long Description&quot;) = row(&quot;Vehicle Data - Long Description (Key)&quot;)&#xD;&#xA;&#x9;newRow(&quot;Exterior Color&quot;) = row(&quot;Vehicle Data - Exterior Color (Key)&quot;)&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;' Vlookup Profit Center&#xD;&#xA;&#x9;&#x9;Dim ProfitCenter = (From srow In in_dt_SegmentSummary.AsEnumerable&#xD;&#xA;                                Where srow(&quot;Segment&quot;).ToString = row(&quot;Segment&quot;).ToString&#xD;&#xA;                Let Brand = row(&quot;Vehicle Data - Brand (Key)&quot;).ToString&#xD;&#xA;                                Select srow(Brand)&#xD;&#xA;                               ).FirstOrDefault()&#xD;&#xA;&#x9;newRow(&quot;Profit Center&quot;) = ProfitCenter&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;&#xD;&#xA;    ' Map other columns as needed&#xD;&#xA;    destinationTable.Rows.Add(newRow)&#xD;&#xA;Next&#xD;&#xA;&#xD;&#xA;out_dt_SalesReport = destinationTable&#xD;&#xA;    &#xD;&#xA;Catch ex As Exception&#xD;&#xA;    ' Handle the exception and display an error message or log the exception details&#xD;&#xA;&#x9;Console.WriteLine(ex.Message)&#xD;&#xA;&#x9;Throw (ex)&#xD;&#xA;    'Throw Exception(&quot;An error occurred while mapping the values: &quot; &amp; ex.Message)&#xD;&#xA;End Try&#xD;&#xA;" DisplayName="Invoke Code Sales Report Generation " sap:VirtualizedContainerService.HintSize="338,165" sap2010:WorkflowViewState.IdRef="InvokeCode_2">
+      <ui:InvokeCode.Arguments>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_EFCSalesReport">[in_dt_EFCSalesReport]</InArgument>
+        <InOutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt_SalesReport">[out_dt_SalesReport]</InOutArgument>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_PO">[in_dt_PO]</InArgument>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_SegmentSummary">[in_dt_SegmentSummary]</InArgument>
+      </ui:InvokeCode.Arguments>
+    </ui:InvokeCode>
+    <ui:LogMessage DisplayName="Log Message Sales Report Creation : End" sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Sales Report Creation : End&quot;]" />
+  </Sequence>
+</Activity>

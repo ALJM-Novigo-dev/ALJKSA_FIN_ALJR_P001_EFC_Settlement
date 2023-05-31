@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="KoarDSH7X0mn6BwvG0vXTg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://aljbodev.alj.com/BOE/portal/2210051642/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" DesignTimeRectangle="24, 166, 242, 32" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'SAP.M.SEARCHFIELD __fie…'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl idx='2' ui5-class='sap.m.SearchField' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl tag='DIV' ui5-class='sap.m.SearchField' type='' class='sapMSF sapUiSizeCompact BILP-searchborder' aaname='' /&gt;" Guid="f33ffb10-55f0-4a30-9fe4-ff72cf9775bc" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="db06de1ccae6f2f515cba7bb5325215e.png" xmlns="">0eqvQh9zSFE6gbMmrWhy94Q</imageRef>
+    </TargetAnchorable>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

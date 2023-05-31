@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="rl7m2igCeESXwKkNFIEdvA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://aljbodev.alj.com/BOE/portal/2210051642/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" DesignTimeRectangle="48, 193, 85, 40" DesignTimeScaleFactor="1" FriendlyName="'Report 1Close'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.TabStrip' /&gt;&lt;webctrl ui5-class='sap.m.TabStripItem' visibleinnertext='Report 1' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.TabStrip' /&gt;&lt;webctrl ui5-class='sap.m.TabStripItem' visibleinnertext='Report 1' tag='DIV' type='' class='sapMTabStripItem sapMTabStripItemSelected wingTestReportReport_1' aaname='' check:text='Report 1Close' /&gt;" Guid="00c73a01-336e-40ca-aeca-e3fe8129663a" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="a44394a931e2657814f5d3e48886713e.png" xmlns="">0tTAsolCrk0--kvpAAHsKGw</imageRef>
+    </TargetAnchorable>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,13 @@
+﻿{
+  "Id": "Duop_stKFUu63itiPIqG1Q",
+  "Reference": "Fv2nvoLrq0eKUR-rLQM7hA/Duop_stKFUu63itiPIqG1Q",
+  "ParentRef": "Fv2nvoLrq0eKUR-rLQM7hA/dDbZE8FisEOCSdoQMYjf9Q",
+  "Name": "004_SAPBI_AutenticationType",
+  "Type": "Element",
+  "TaxonomyType": "Dropdown",
+  "Created": "2023-04-04T05:44:09.579671Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-04-04T05:44:09.579671Z"
+}

@@ -1,0 +1,16 @@
+﻿{
+  "Id": "Pf3ivNEcEE2BBZjeKDmUkw",
+  "Reference": "Fv2nvoLrq0eKUR-rLQM7hA/Pf3ivNEcEE2BBZjeKDmUkw",
+  "ParentRef": "Fv2nvoLrq0eKUR-rLQM7hA/dDbZE8FisEOCSdoQMYjf9Q",
+  "Name": "007_ErrorInformationon",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2023-04-04T05:44:09.6242525Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-04-04T05:44:09.6242525Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

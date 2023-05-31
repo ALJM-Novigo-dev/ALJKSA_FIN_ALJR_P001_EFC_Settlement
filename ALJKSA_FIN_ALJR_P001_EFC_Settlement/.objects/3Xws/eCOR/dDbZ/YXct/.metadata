@@ -1,0 +1,13 @@
+﻿{
+  "Id": "YXct4dDHIEaHQsH8mgsXuA",
+  "Reference": "Fv2nvoLrq0eKUR-rLQM7hA/YXct4dDHIEaHQsH8mgsXuA",
+  "ParentRef": "Fv2nvoLrq0eKUR-rLQM7hA/dDbZE8FisEOCSdoQMYjf9Q",
+  "Name": "002_SAPBI_Password",
+  "Type": "Element",
+  "TaxonomyType": "Password",
+  "Created": "2023-04-04T05:44:09.5575663Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-04-04T05:44:09.5575663Z"
+}

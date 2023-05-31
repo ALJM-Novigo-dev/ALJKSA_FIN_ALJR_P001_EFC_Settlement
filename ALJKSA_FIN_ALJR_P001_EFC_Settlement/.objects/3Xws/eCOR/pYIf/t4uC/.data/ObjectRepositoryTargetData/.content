@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="QD5tPLprnUGl3oSdDHObjQ" Reference="KLsic7J1QE-Q7h60I_1cQw/SqbFne5GlUyc_pA6ElFq0w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://aljbodev.alj.com/BOE/portal/2210051642/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" DesignTimeRectangle="385, 573, 216, 25" DesignTimeScaleFactor="0.75" FriendlyName="'Enter value(s)'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.VBox' innertext='Enter value(s) for Calendar Year*' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.VBox' innertext='Enter value(s) for Calendar Year*' tag='DIV' type='' class='sapMFlexBox sapMVBox sapMFlexBoxJustifyStart sapMFlexBoxAlignItemsStart sapMFlexBoxWrapNoWrap sapMFlexBoxAlignContentStretch sapWiseSummaryItemContainer sapMFlexItemAlignAuto sapMFlexBoxBGTransparent sapMFlexItem' aaname='' check:text='Enter value(s) for Calendar Year(2)2021; 2022' /&gt;" Guid="10554f61-7ba9-479c-9dc5-d2aaf0a04e6f" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="a56f484cff785304f8d48faa91698a16.png" xmlns="">0n9gHh_osYUu2B4fEPcDmdw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

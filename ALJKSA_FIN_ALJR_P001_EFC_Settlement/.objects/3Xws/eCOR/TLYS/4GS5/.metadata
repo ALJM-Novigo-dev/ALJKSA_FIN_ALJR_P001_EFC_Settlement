@@ -1,0 +1,14 @@
+﻿{
+  "Id": "4GS5VmP04U6Qc79BiRtm2A",
+  "Reference": "Fv2nvoLrq0eKUR-rLQM7hA/4GS5VmP04U6Qc79BiRtm2A",
+  "ParentRef": "Fv2nvoLrq0eKUR-rLQM7hA/TLYSvI6wP0SzS-bTeSD4Dg",
+  "Name": "001_MyInboxBILaunchPad",
+  "Description": "Header of the page ",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Created": "2023-04-04T05:44:10.1597231Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-04-04T05:44:10.1597231Z"
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="SMgGUthx2kqEDyS2kj2FfA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHESURBVDhPjZK9axRBGMYHG4ugWMfKv8B0YmGf1jRaSDRgodjoQbSyMkELQdIYQcRSsREMFiqIbSBgYZWg+HXk2CS3l9uPudnbj5/vzO4m63HGDPx43533eZ7dnV112LUyMUFNtXW41TSO4gRAS9DC2FWLWV0tN6SOBvzXfBAqL6AoCnIHVS37pnDcE1jUi08elx+u8+zdFl87hkycWZa72hT+MyAX4Tcxzi61Uec3ON36xdMPfRIJ8ZeXDwywc2WSDJNmcsecz99Tpu70UBd9Tsz5fwWMwx1ibFJiMxRSBhLWjQqm7uao2RR1SbuQ0aB6zwUEOiHQQ0LB9rb6EjJ5E45eBXUFbjwf7JksVuPMdvUiw65ga933Y8PCG5i8Bcevw5E5ZJbszW2t7ErtBAO6gcHVfoX0jz/m8ipwah6OXaOcV9i+siu1tavxBFub3H5VcPYeLuSkvI7VeL24nPf0fkDHj+h0Sza7Mfb69Zph+lHBuftwZgEWV5B5zKYvc6eL9gPa26Fu74T8Ft5/0Tx4m8ihGWaWMi48gZfy+e2hOc12TaQru1I/vaAlJD+8wD1iOBiWP4ys1P5MocHOGlhtq3Qr9QdJ36nDW6DRVAAAAABJRU5ErkJggg==" Selector="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" Title="SAP BI Launch Pad" Url="https://aljbodev.alj.com/BOE/BI">
+      <imageRef attrName="InformativeScreenshot" originalValue="5f6f50cada53f4741f500c69684fa93e.jpg" xmlns="">0AKllW_JSIUCKxGLyqUyc1A</imageRef>
+    </TargetApp>
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="cNVdniIprkyJDq2CCdnTQA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://aljbodev.alj.com/BOE/portal/2210051642/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" DesignTimeRectangle="1044, 674, 56, 32" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Export'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.Button' ui5-role='button' innertext='Export' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.Button' ui5-role='button' innertext='Export' tag='BUTTON' type='' class='sapMBtnBase sapMBtn sapMBtnInverted wingTestConfirmExportButton sapMBarChild' aaname='Export' check:text='Export' /&gt;" Guid="0dd3985d-dadc-4000-9f6f-415b233ce151" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="5f3c37b7cb7968556704f34b2b219326.png" xmlns="">03Ebc8qTWlU-68kqjdzW4OQ</imageRef>
+    </TargetAnchorable>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

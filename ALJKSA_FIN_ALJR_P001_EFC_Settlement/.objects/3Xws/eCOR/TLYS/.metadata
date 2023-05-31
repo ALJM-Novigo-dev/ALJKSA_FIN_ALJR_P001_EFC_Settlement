@@ -1,0 +1,12 @@
+﻿{
+  "Id": "TLYSvI6wP0SzS-bTeSD4Dg",
+  "Reference": "Fv2nvoLrq0eKUR-rLQM7hA/TLYSvI6wP0SzS-bTeSD4Dg",
+  "ParentRef": "Fv2nvoLrq0eKUR-rLQM7hA/eCORZY0-ek-E5KzfvE6IKQ",
+  "Name": "003_SAPBI_Inbox",
+  "Type": "Screen",
+  "Created": "2023-04-04T05:44:10.1518164Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-04-04T05:44:10.1518164Z"
+}

@@ -1,0 +1,13 @@
+﻿{
+  "Id": "Lj4mfI7jA0G-bSGdpXTLag",
+  "Reference": "Fv2nvoLrq0eKUR-rLQM7hA/Lj4mfI7jA0G-bSGdpXTLag",
+  "ParentRef": "Fv2nvoLrq0eKUR-rLQM7hA/dDbZE8FisEOCSdoQMYjf9Q",
+  "Name": "Restore Cancel",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Created": "2023-04-04T05:44:09.6940005Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-04-04T05:44:09.6940005Z"
+}

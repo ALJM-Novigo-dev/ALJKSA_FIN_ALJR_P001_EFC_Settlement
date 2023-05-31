@@ -1,0 +1,16 @@
+﻿{
+  "Id": "n3nXZCrEaE-Y7IfxsIs8MA",
+  "Reference": "Fv2nvoLrq0eKUR-rLQM7hA/n3nXZCrEaE-Y7IfxsIs8MA",
+  "ParentRef": "Fv2nvoLrq0eKUR-rLQM7hA/pYIfq33b2k2GZ7ASeY2t2Q",
+  "Name": "002B_Calendar Year Label",
+  "Type": "Element",
+  "TaxonomyType": "None",
+  "Created": "2023-04-04T05:44:09.8331436Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-04-04T05:44:09.8331436Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

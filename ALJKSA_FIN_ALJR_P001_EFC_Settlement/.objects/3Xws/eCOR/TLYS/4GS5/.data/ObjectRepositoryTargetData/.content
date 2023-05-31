@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="E_iMViE_CkeLN_C2E3Y7AQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://aljbodev.alj.com/BOE/portal/2210051642/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" DesignTimeRectangle="513, 79, 111, 48" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'My InboxBI Launch Pad'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-tooltip='BI Launch Pad' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-tooltip='BI Launch Pad' tag='BUTTON' type='' class='sapMBtnBase sapMBtn sapUiSizeCompact BILP-docPopupIcon BILP-popOverBox BILP-launchpadLabel BILP-bordershadow1 sapMBarChild' aaname='BI Launch Pad' check:innerText='My Inbox' /&gt;" Guid="4a6d8ba4-cf71-47fd-8bae-80c62f66c173" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="cff0251110bbd72cd6586f836fa3cb64.png" xmlns="">0OFv9LrbD4ki9Ocs9DZyjRQ</imageRef>
+    </TargetAnchorable>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

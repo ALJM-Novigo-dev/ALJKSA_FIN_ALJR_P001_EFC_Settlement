@@ -1,0 +1,16 @@
+﻿{
+  "Id": "A2u4ZsQGmU6t0Rv3Jy6enA",
+  "Reference": "Fv2nvoLrq0eKUR-rLQM7hA/A2u4ZsQGmU6t0Rv3Jy6enA",
+  "ParentRef": "Fv2nvoLrq0eKUR-rLQM7hA/dDbZE8FisEOCSdoQMYjf9Q",
+  "Name": "010_SAP Client",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2023-04-04T05:44:09.6819707Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-04-04T05:44:09.6819707Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

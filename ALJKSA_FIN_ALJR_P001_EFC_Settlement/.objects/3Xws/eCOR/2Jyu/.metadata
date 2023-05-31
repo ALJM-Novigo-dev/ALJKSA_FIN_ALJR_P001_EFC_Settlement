@@ -1,0 +1,16 @@
+﻿{
+  "Id": "2JyuAsmhf0uEd21WOhYzPw",
+  "Reference": "Fv2nvoLrq0eKUR-rLQM7hA/2JyuAsmhf0uEd21WOhYzPw",
+  "ParentRef": "Fv2nvoLrq0eKUR-rLQM7hA/eCORZY0-ek-E5KzfvE6IKQ",
+  "Name": "006_BI_FolderScreen",
+  "Description": "BI Folder Options",
+  "Type": "Screen",
+  "Created": "2023-04-04T05:44:10.3360267Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-04-04T05:44:10.3360267Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

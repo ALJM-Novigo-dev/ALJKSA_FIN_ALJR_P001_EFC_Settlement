@@ -1,0 +1,694 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="AdminFeesReport" this:AdminFeesReport.in_ProcessingDate="2022-09-10" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:uasa="clr-namespace:UiPath.Activities.System.Arrays;assembly=UiPath.System.Activities" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="in_dt_SalesReport" Type="InArgument(sd:DataTable)" />
+    <x:Property Name="in_dt_InterAdminFeesReport" Type="InArgument(sd:DataTable)" />
+    <x:Property Name="in_dt_GLAndCustomer" Type="InArgument(sd:DataTable)" />
+    <x:Property Name="in_ProcessingDate" Type="InArgument(s:DateTime)" />
+    <x:Property Name="in_dt_AdminMaster" Type="InArgument(sd:DataTable)" />
+  </x:Members>
+  <this:AdminFeesReport.in_Config>
+    <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" />
+  </this:AdminFeesReport.in_Config>
+  <this:AdminFeesReport.in_dt_InterAdminFeesReport>
+    <InArgument x:TypeArguments="sd:DataTable" />
+  </this:AdminFeesReport.in_dt_InterAdminFeesReport>
+  <this:AdminFeesReport.in_dt_GLAndCustomer>
+    <InArgument x:TypeArguments="sd:DataTable" />
+  </this:AdminFeesReport.in_dt_GLAndCustomer>
+  <this:AdminFeesReport.in_dt_AdminMaster>
+    <InArgument x:TypeArguments="sd:DataTable" />
+  </this:AdminFeesReport.in_dt_AdminMaster>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>960,6766</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>AdminFeesReport_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="37">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Globalization</x:String>
+      <x:String>UiPath.Activities.System.Arrays</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="59">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="AdminFeesReport" sap:VirtualizedContainerService.HintSize="721,6701" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="scg:List(sd:DataTable)" Default="[New List(Of DataTable)]" Name="InvoiceDTList" />
+      <Variable x:TypeArguments="scg:List(sd:DataTable)" Default="[New List(Of DataTable)]" Name="SettlementDTList" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_AdminFeesReport" />
+      <Variable x:TypeArguments="x:String" Name="CompanyCode" />
+      <Variable x:TypeArguments="x:String" Name="LocalCurrency" />
+      <Variable x:TypeArguments="x:String" Name="CreditControlArea" />
+      <Variable x:TypeArguments="s:String[]" Default="[{&quot;dd-MMM-yy&quot;,&quot;MM/dd/yyyy HH:mm:ss&quot;,&quot;dd-MM-yyyy&quot;}]" Name="DateFormatArray" />
+      <Variable x:TypeArguments="x:String" Name="GLInvoice" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_UpdatedAdminFees" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="659,52" sap2010:WorkflowViewState.IdRef="CommentOut_7">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="654,988" sap2010:WorkflowViewState.IdRef="Sequence_32">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence DisplayName="Reading mastersheets - can be removed if it is pre-read" sap:VirtualizedContainerService.HintSize="592,877" sap2010:WorkflowViewState.IdRef="Sequence_15">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="530,638" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+              <ueab:ExcelProcessScopeX.Body>
+                <ActivityAction x:TypeArguments="ui:IExcelProcess">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,551" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ueab:ExcelApplicationCard Password="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="434,440" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ReadFormatting="DisplayValue" ResizeWindow="None" WorkbookPath="ALJR EFC Sales Report.xlsx">
+                      <ueab:ExcelApplicationCard.Body>
+                        <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,171" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:ExcelReadRange AddHeaders="True" DataTable="[in_dt_SalesReport]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="338,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" SheetName="ALJR EFC Sales Report">
+                              <ui:ExcelReadRange.Range>
+                                <InArgument x:TypeArguments="x:String">
+                                  <Literal x:TypeArguments="x:String" Value="" />
+                                </InArgument>
+                              </ui:ExcelReadRange.Range>
+                            </ui:ExcelReadRange>
+                          </Sequence>
+                        </ActivityAction>
+                      </ueab:ExcelApplicationCard.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ueab:ExcelApplicationCard>
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelProcessScopeX.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ueab:ExcelProcessScopeX>
+            <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[in_dt_GLAndCustomer]" DisplayName="Read Range Workbook - Bank GL &amp; Customer #" sap:VirtualizedContainerService.HintSize="530,88" sap2010:WorkflowViewState.IdRef="ReadRange_4" SheetName="Sheet1" WorkbookPath="Bank GL &amp; Customer Number -Master.xlsx">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ReadRange>
+          </Sequence>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <ui:Comment sap:VirtualizedContainerService.HintSize="659,56" sap2010:WorkflowViewState.IdRef="Comment_3" Text="// add filter for paid on" />
+    <Sequence DisplayName="Prep admin fees intermediate datatable" sap:VirtualizedContainerService.HintSize="659,389" sap2010:WorkflowViewState.IdRef="Sequence_30">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="338,52" sap2010:WorkflowViewState.IdRef="CommentOut_8">
+        <ui:CommentOut.Body>
+          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,199" sap2010:WorkflowViewState.IdRef="Sequence_33">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[in_dt_InterAdminFeesReport]" DisplayName="Read Range Workbook - Admin Fees Template" sap:VirtualizedContainerService.HintSize="338,88" sap2010:WorkflowViewState.IdRef="ReadRange_3" SheetName="Sheet1" WorkbookPath="Admin Fees Template.xlsx" />
+          </Sequence>
+        </ui:CommentOut.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:CommentOut>
+      <ui:AddDataColumn x:TypeArguments="x:String" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Invoice Number" DataTable="[in_dt_InterAdminFeesReport]" DisplayName="Add Data Column - Invoice Number" sap:VirtualizedContainerService.HintSize="338,186" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_3" />
+    </Sequence>
+    <Sequence DisplayName="Inititalize Variables" sap:VirtualizedContainerService.HintSize="659,576" sap2010:WorkflowViewState.IdRef="Sequence_18">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Assign DisplayName="Clone- dt_AdminFeesReport" sap:VirtualizedContainerService.HintSize="338,61" sap2010:WorkflowViewState.IdRef="Assign_43">
+        <Assign.To>
+          <OutArgument x:TypeArguments="sd:DataTable">[dt_AdminFeesReport]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="sd:DataTable">[in_dt_InterAdminFeesReport.Clone]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign DisplayName="Assign - str_CompanyCode" sap:VirtualizedContainerService.HintSize="338,61" sap2010:WorkflowViewState.IdRef="Assign_46">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[CompanyCode]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">[in_Config("CompanyCode1700").ToString]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign DisplayName="Assign - str_LocalCurrency" sap:VirtualizedContainerService.HintSize="338,61" sap2010:WorkflowViewState.IdRef="Assign_47">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[LocalCurrency]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">[in_Config("LocalCurrency").ToString]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign DisplayName="Assign - str_CreditControlArea" sap:VirtualizedContainerService.HintSize="338,61" sap2010:WorkflowViewState.IdRef="Assign_48">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[CreditControlArea]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">[in_Config("CreditControlArea").ToString]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign DisplayName="Assign - str_GLVendor" sap:VirtualizedContainerService.HintSize="338,61" sap2010:WorkflowViewState.IdRef="Assign_58">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[GLInvoice]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">[in_Config("GLVendor").ToString]</InArgument>
+        </Assign.Value>
+      </Assign>
+    </Sequence>
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="Try&#xA;Dim sourceTable As DataTable = DirectCast(in_dt_SalesReport, DataTable)&#xA;Dim destinationTable As DataTable = DirectCast(io_dt_InterAdminFeesReport, DataTable)&#xA;&#xA;For Each row As DataRow In sourceTable.Rows&#xA;    Dim settlementDateString As String = row(&quot;Settlement Date&quot;).ToString()&#xA;    Dim Reference As String = row(&quot;Invoice Number&quot;).ToString() &amp; &quot;          -&quot;&#xA;    Dim SettlementDate As Date&#xA;&#xA;    If Not String.IsNullOrEmpty(settlementDateString) AndAlso DateTime.TryParseExact(settlementDateString, in_arr_DateFormats, System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, SettlementDate) Then&#xA;        Dim DocumentHeaderText As String = &quot;EFC Admin Fees &quot; &amp; SettlementDate.ToString(&quot;dd-MMM-yy&quot;)&#xA;        Dim newRow As DataRow = destinationTable.NewRow()&#xA;        newRow(&quot;Document Date&quot;) = SettlementDate.ToString(&quot;dd-MM-yyyy&quot;)&#xA;        newRow(&quot;Company Code&quot;) = in_CompanyCode&#xA;        newRow(&quot;Posting Date&quot;) = SettlementDate.ToString(&quot;dd-MM-yyyy&quot;)&#xA;        newRow(&quot;Fiscal Year&quot;) = SettlementDate.Month.ToString()&#xA;        newRow(&quot;Local Currency&quot;) = in_LocalCurrency&#xA;        newRow(&quot;Eff.exchange rate&quot;) = &quot;&quot;&#xA;        newRow(&quot;Invoice Number&quot;) = row(&quot;Invoice Number&quot;).ToString&#xA;        newRow(&quot;Reference&quot;) = Reference&#xA;        newRow(&quot;Document Header Text&quot;) = DocumentHeaderText&#xA;        newRow(&quot;Specil G/L ind.&quot;) = &quot;&quot;&#xA;        newRow(&quot;Amount in doc curr.&quot;) = row(&quot;Admin Fees&quot;)&#xA;        newRow(&quot;Amount in local currency&quot;) = row(&quot;Admin Fees&quot;)&#xA;        newRow(&quot;Cost Center&quot;) = &quot;&quot;&#xA;        newRow(&quot;Baseline Payment Dte&quot;) = &quot;&quot;&#xA;        newRow(&quot;Payment Block&quot;) = &quot;&quot;&#xA;        newRow(&quot;Payment Method&quot;) = &quot;&quot;&#xA;        newRow(&quot;Value Date&quot;) = SettlementDate.ToString(&quot;dd-MM-yyyy&quot;)&#xA;        newRow(&quot;Terms of Payment&quot;) = &quot;&quot;&#xA;        newRow(&quot;Reference Key 3&quot;) = row(&quot;VIN&quot;)&#xA;        newRow(&quot;Credit Control Area&quot;) = in_CreditControlArea&#xA;        newRow(&quot;Profit Center&quot;) = row(&quot;Profit Center&quot;)&#xA;&#xA;        destinationTable.Rows.Add(newRow)&#xA;    Else&#xA;        Console.WriteLine(&quot;Error: Invalid date format in row &quot; &amp; (sourceTable.Rows.IndexOf(row) + 1).ToString())&#xA;        ' Handle the invalid date format error here as needed&#xA;    End If&#xA;Next&#xA;&#xA;io_dt_InterAdminFeesReport = destinationTable&#xA;&#xA;Catch ex As Exception&#xA;    ' Handle the exception and display an error message or log the exception details&#xA;    Dim lineNumber As Integer = (New System.Diagnostics.StackTrace(ex, True)).GetFrame(0).GetFileLineNumber()&#xA;    Console.WriteLine(&quot;Error at line &quot; &amp; lineNumber.ToString() &amp; &quot;: &quot; &amp; ex.Message &amp; &quot;. Source:&#x9; &quot; &amp; ex.Source)&#xA;    Throw ex&#xA;End Try&#xA;" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="659,165" sap2010:WorkflowViewState.IdRef="InvokeCode_10">
+      <ui:InvokeCode.Arguments>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_SalesReport">[in_dt_SalesReport]</InArgument>
+        <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_dt_InterAdminFeesReport">[in_dt_InterAdminFeesReport]</InOutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_CompanyCode">[companyCode]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_CreditControlArea">[creditControlArea]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_LocalCurrency">[localCurrency]</InArgument>
+        <InArgument x:TypeArguments="s:String[]" x:Key="in_arr_DateFormats">[dateFormatArray]</InArgument>
+      </ui:InvokeCode.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InvokeCode>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="659,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Total Rows in Intermediate Admin Fees Report: &quot;+in_dt_InterAdminFeesReport.RowCount.ToString]" />
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[in_dt_InterAdminFeesReport]" DisplayName="For Each Row in Data Table - dt_InterAdminFeesReport" sap:VirtualizedContainerService.HintSize="659,3471" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+      <ui:ForEachRow.Body>
+        <ActivityAction x:TypeArguments="sd:DataRow">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body - For each (dt_InterAdminFeesReport)" sap:VirtualizedContainerService.HintSize="625,3355" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="s:DateTime" Name="InvoiceDate" />
+              <Variable x:TypeArguments="sd:DataTable" Name="dt_SettlementTemp" />
+              <Variable x:TypeArguments="sd:DataRow" Name="SalesReportRow" />
+              <Variable x:TypeArguments="sd:DataTable" Name="dt_InvoiceTemp" />
+              <Variable x:TypeArguments="s:DateTime" Name="PostingDate" />
+              <Variable x:TypeArguments="x:String" Name="isInvoiceMonthCurrentMonth" />
+              <Variable x:TypeArguments="x:String" Name="GLVendor" />
+              <Variable x:TypeArguments="x:String" Name="CustomerNo" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence DisplayName="Initialize Variables for dt_InterAdminFeesReport" sap:VirtualizedContainerService.HintSize="563,1132" sap2010:WorkflowViewState.IdRef="Sequence_14">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:MultipleAssign DisplayName="Cloning dt_SettlementTemp and dt_InvoiceTemp" sap:VirtualizedContainerService.HintSize="431,132" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                <ui:MultipleAssign.AssignOperations>
+                  <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="sd:DataTable">[dt_SettlementTemp]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="sd:DataTable">[in_dt_InterAdminFeesReport.Clone]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="sd:DataTable">[dt_InvoiceTemp]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="sd:DataTable">[in_dt_InterAdminFeesReport.Clone]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                  </scg:List>
+                </ui:MultipleAssign.AssignOperations>
+              </ui:MultipleAssign>
+              <Assign DisplayName="Assign - salesReportRow" sap:VirtualizedContainerService.HintSize="431,61" sap2010:WorkflowViewState.IdRef="Assign_55">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="sd:DataRow">[SalesReportRow]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="sd:DataRow">[(From row In in_dt_SalesReport Where row("Invoice Number").ToString.Equals(CurrentRow("Invoice Number").ToString))(0)]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign DisplayName="Assign - InvoiceDate" sap:VirtualizedContainerService.HintSize="431,61" sap2010:WorkflowViewState.IdRef="Assign_1">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="s:DateTime">[InvoiceDate]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="s:DateTime">[DateTime.ParseExact(salesReportRow("Invoice Date").ToString,dateFormatArray, System.Globalization.CultureInfo.InvariantCulture)]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign DisplayName="Assign - postingDate" sap:VirtualizedContainerService.HintSize="431,61" sap2010:WorkflowViewState.IdRef="Assign_51">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="s:DateTime">[PostingDate]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="s:DateTime">[DateTime.ParseExact(CurrentRow("Posting Date").ToString, dateFormatArray, System.Globalization.CultureInfo.InvariantCulture)]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign DisplayName="Assign - gLVendor" sap:VirtualizedContainerService.HintSize="431,61" sap2010:WorkflowViewState.IdRef="Assign_56">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[GLVendor]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">[in_dt_GLAndCustomer.Select("[Customer]="+salesReportRow("Customer").ToString)(0).Item("Bank#").ToString]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign DisplayName="Assign - customerNo" sap:VirtualizedContainerService.HintSize="431,61" sap2010:WorkflowViewState.IdRef="Assign_57">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[CustomerNo]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">[salesReportRow("Customer").ToString]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ui:CommentOut DisplayName="Comment Out - Test" sap:VirtualizedContainerService.HintSize="431,52" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+                <ui:CommentOut.Body>
+                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,172" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Assign DisplayName="Assign - isInvoiceMonthCurrentMonth- test!!!" sap:VirtualizedContainerService.HintSize="338,61" sap2010:WorkflowViewState.IdRef="Assign_53">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[isInvoiceMonthCurrentMonth]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[If(InvoiceDate.Month=10,"Y",If(InvoiceDate.Month=9,"N",Nothing))]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </Sequence>
+                </ui:CommentOut.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:CommentOut>
+              <Assign sap2010:Annotation.AnnotationText="Processing date as input &#xA;" DisplayName="Assign - isInvoiceMonthCurrentMonth - Test" sap:VirtualizedContainerService.HintSize="431,103" sap2010:WorkflowViewState.IdRef="Assign_59">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[isInvoiceMonthCurrentMonth]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">[If(InvoiceDate.Month=in_ProcessingDate.Month,"Y",If(InvoiceDate.Month=in_ProcessingDate.AddMonths(-1).Month,"N",Nothing))]</InArgument>
+                </Assign.Value>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </Assign>
+              <ui:CommentOut sap2010:Annotation.AnnotationText="Actual isInvoiceMonthCurrentMonth variable assignment to be used&#xA;" DisplayName="Actual isinvoice var to be used" sap:VirtualizedContainerService.HintSize="431,109" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+                <ui:CommentOut.Body>
+                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,172" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Assign DisplayName="Assign - isInvoiceMonthCurrentMonth" sap:VirtualizedContainerService.HintSize="338,61" sap2010:WorkflowViewState.IdRef="Assign_52">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[isInvoiceMonthCurrentMonth]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Boolean">[If(InvoiceDate.Month=Now.Month,"Y",If(InvoiceDate.Month=Now.AddMonths(-1).Month,"N",Nothing))]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </Sequence>
+                </ui:CommentOut.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:CommentOut>
+            </Sequence>
+            <ui:IfElseIf DisplayName="Else If - Check If invoice month is current month" sap:VirtualizedContainerService.HintSize="563,2072" sap2010:WorkflowViewState.IdRef="IfElseIf_2">
+              <ui:IfElseIf.ConditionBlocks>
+                <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
+                  <ui:IfElseIfBlock BlockType="If" Condition="[isInvoiceMonthCurrentMonth=&quot;Y&quot;]">
+                    <ui:IfElseIfBlock.Then>
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="467,1039" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:InvokeCode ContinueOnError="{x:Null}" Code="For count As Integer = 1 To 2 ' Number of duplicates&#xA;    io_dt_SettlementTemp.Rows.Add(in_CurrentRow.ItemArray)&#xA;&#x9;io_dt_InvoiceTemp.Rows.Add(in_CurrentRow.ItemArray)&#xA;Next" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="405,165" sap2010:WorkflowViewState.IdRef="InvokeCode_15">
+                          <ui:InvokeCode.Arguments>
+                            <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_dt_SettlementTemp">[dt_SettlementTemp]</InOutArgument>
+                            <InArgument x:TypeArguments="sd:DataRow" x:Key="in_CurrentRow">[CurrentRow]</InArgument>
+                            <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_dt_InvoiceTemp">[dt_InvoiceTemp]</InOutArgument>
+                          </ui:InvokeCode.Arguments>
+                        </ui:InvokeCode>
+                        <Sequence DisplayName="Invoice and Settlement" sap:VirtualizedContainerService.HintSize="405,723" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="004_Invoice.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="343,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" Level="Info" LogEntry="OnlyInvocation" LogExit="OnlySuccessfulReturn" UnSafe="False" WorkflowFileName="Workflows/Admin Fees/004_Invoice.xaml">
+                            <ui:InvokeWorkflowFile.Arguments>
+                              <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_dt_InvoiceTemp">[dt_InvoiceTemp]</InOutArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_GLVendor">[gLInvoice]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_Customer">[customerNo]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_IntermediateFilePath">[in_Config("AdminFeesReport").ToString]</InArgument>
+                              <InArgument x:TypeArguments="s:DateTime" x:Key="in_PostingDate">[postingDate]</InArgument>
+                              <InArgument x:TypeArguments="sd:DataRow" x:Key="in_SalesReportRow">[salesReportRow]</InArgument>
+                              <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
+                            </ui:InvokeWorkflowFile.Arguments>
+                          </ui:InvokeWorkflowFile>
+                          <uasa:AppendItemToList x:TypeArguments="sd:DataTable" ItemIndex="{x:Null}" DisplayName="Append Item to List" sap:VirtualizedContainerService.HintSize="343,133" sap2010:WorkflowViewState.IdRef="AppendItemToList`1_4" ItemToAppend="[dt_InvoiceTemp]" List="[InvoiceDTList]" />
+                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="002_Settlement.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="343,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" Level="Info" LogEntry="OnlyInvocation" LogExit="OnlySuccessfulReturn" UnSafe="False" WorkflowFileName="Workflows/Admin Fees/002_Settlement.xaml">
+                            <ui:InvokeWorkflowFile.Arguments>
+                              <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_dt_SettlementTemp">[dt_SettlementTemp]</InOutArgument>
+                              <InArgument x:TypeArguments="s:DateTime" x:Key="in_PostingDate">[postingDate]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_IntermediateFilePath">[in_Config("AdminFeesReport").ToString]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_Customer">[customerNo]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_GLVendor">[gLVendor]</InArgument>
+                              <InArgument x:TypeArguments="sd:DataRow" x:Key="in_SalesReportRow">[salesReportRow]</InArgument>
+                              <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
+                            </ui:InvokeWorkflowFile.Arguments>
+                          </ui:InvokeWorkflowFile>
+                          <uasa:AppendItemToList x:TypeArguments="sd:DataTable" ItemIndex="{x:Null}" DisplayName="Append Item to List" sap:VirtualizedContainerService.HintSize="343,133" sap2010:WorkflowViewState.IdRef="AppendItemToList`1_5" ItemToAppend="[dt_SettlementTemp]" List="[settlementDTList]" />
+                        </Sequence>
+                      </Sequence>
+                    </ui:IfElseIfBlock.Then>
+                  </ui:IfElseIfBlock>
+                  <ui:IfElseIfBlock BlockType="ElseIf" Condition="[isInvoiceMonthCurrentMonth=&quot;N&quot;]">
+                    <ui:IfElseIfBlock.Then>
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="467,713" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Sequence DisplayName="Settlement" sap:VirtualizedContainerService.HintSize="405,602" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:InvokeCode ContinueOnError="{x:Null}" Code="For count As Integer = 1 To 2 ' Number of duplicates&#xA;    io_dt_SettlementTemp.Rows.Add(in_CurrentRow.ItemArray)&#xA;Next" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="343,165" sap2010:WorkflowViewState.IdRef="InvokeCode_18">
+                            <ui:InvokeCode.Arguments>
+                              <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_dt_SettlementTemp">[dt_SettlementTemp]</InOutArgument>
+                              <InArgument x:TypeArguments="sd:DataRow" x:Key="in_CurrentRow">[CurrentRow]</InArgument>
+                              <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_dt_InvoiceTemp">[dt_InvoiceTemp]</InOutArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_str_IsInvoiceMonthCurrentMonth">[isInvoiceMonthCurrentMonth]</InArgument>
+                            </ui:InvokeCode.Arguments>
+                          </ui:InvokeCode>
+                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="002_Settlement.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="343,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" Level="Info" LogEntry="OnlyInvocation" LogExit="OnlySuccessfulReturn" UnSafe="False" WorkflowFileName="Workflows/Admin Fees/002_Settlement.xaml">
+                            <ui:InvokeWorkflowFile.Arguments>
+                              <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_dt_SettlementTemp">[dt_SettlementTemp]</InOutArgument>
+                              <InArgument x:TypeArguments="s:DateTime" x:Key="in_PostingDate">[postingDate]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_IntermediateFilePath">[in_Config("AdminFeesReport").ToString]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_Customer">[customerNo]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_GLVendor">[gLVendor]</InArgument>
+                              <InArgument x:TypeArguments="sd:DataRow" x:Key="in_SalesReportRow">[salesReportRow]</InArgument>
+                              <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
+                            </ui:InvokeWorkflowFile.Arguments>
+                          </ui:InvokeWorkflowFile>
+                          <uasa:AppendItemToList x:TypeArguments="sd:DataTable" ItemIndex="{x:Null}" DisplayName="Append Item to List" sap:VirtualizedContainerService.HintSize="343,133" sap2010:WorkflowViewState.IdRef="AppendItemToList`1_6" ItemToAppend="[dt_SettlementTemp]" List="[SettlementDTList]" />
+                        </Sequence>
+                      </Sequence>
+                    </ui:IfElseIfBlock.Then>
+                  </ui:IfElseIfBlock>
+                </sc:BindingList>
+              </ui:IfElseIf.ConditionBlocks>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:IfElseIf>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEachRow.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ForEachRow>
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim listCombinedDT As New List(Of DataTable)&#xA;listCombinedDT.AddRange(in_list_InvoiceDT)&#xA;listCombinedDT.AddRange(in_list_SettlementDT)&#xA;&#xA;For Each item As DataTable In listCombinedDT&#xA;    Dim itemIndex As Integer = listCombinedDT.IndexOf(item)&#xA;&#x9;item.AsEnumerable().ToList().ForEach(Sub(row)&#xA;                                             row(&quot;Sequence No&quot;) = (itemIndex + 1).ToString()&#xA;                                         End Sub)&#xA;    mergedTable.Merge(item)&#xA;    &#xA;Next&#xA;" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="659,165" sap2010:WorkflowViewState.IdRef="InvokeCode_7">
+      <ui:InvokeCode.Arguments>
+        <InOutArgument x:TypeArguments="sd:DataTable" x:Key="mergedTable">[dt_AdminFeesReport]</InOutArgument>
+        <InArgument x:TypeArguments="scg:List(sd:DataTable)" x:Key="in_list_InvoiceDT">[invoiceDTList]</InArgument>
+        <InArgument x:TypeArguments="scg:List(sd:DataTable)" x:Key="in_list_SettlementDT">[settlementDTList]</InArgument>
+      </ui:InvokeCode.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InvokeCode>
+    <ui:RemoveDataColumn Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Invoice Number" DataTable="[dt_AdminFeesReport]" DisplayName="Remove Data Column - Invoice Number" sap:VirtualizedContainerService.HintSize="659,186" sap2010:WorkflowViewState.IdRef="RemoveDataColumn_1" />
+    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[dt_AdminFeesReport]" DisplayName="Write Range Workbook - Intermediate Admin Fees" sap:VirtualizedContainerService.HintSize="659,116" sap2010:WorkflowViewState.IdRef="WriteRange_4" SheetName="[in_Config(&quot;AdminFeesSheetIntermediate&quot;).ToString]" WorkbookPath="[in_Config(&quot;AdminFeesReport&quot;).ToString]" />
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="659,52" sap2010:WorkflowViewState.IdRef="CommentOut_9">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,255" sap2010:WorkflowViewState.IdRef="Sequence_34">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Read ALJR EFC Sales Report Full Master file" DisplayName="Read_Excel_Report_Workbook.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="338,144" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="Utilities\Read_Excel_Report_Workbook.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="in_InputFileFolderPath" />
+              <InArgument x:TypeArguments="x:String" x:Key="in_InputSheetName">
+                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;SalesReportAdminFeesSheetName&quot;).tostring" />
+              </InArgument>
+              <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt_Table">
+                <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="in_dt_AdminMaster" />
+              </OutArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:InvokeWorkflowFile>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="005_UpdateAdminFees.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="659,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="Workflows/Admin Fees/005_UpdateAdminFees.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_AdminFeesReport">
+          <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="dt_AdminFeesReport" />
+        </InArgument>
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt_UpdatedAdminFees">
+          <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dt_UpdatedAdminFees" />
+        </OutArgument>
+        <InArgument x:TypeArguments="s:DateTime" x:Key="in_ProcessingDate">
+          <VisualBasicValue x:TypeArguments="s:DateTime" ExpressionText="in_ProcessingDate" />
+        </InArgument>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_AdminMaster">
+          <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="in_dt_AdminMaster" />
+        </InArgument>
+        <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
+          <VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="in_Config" />
+        </InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:FilterDataTable sap2010:Annotation.AnnotationText="Filter with posting key 11 and 40" DataTable="[dt_AdminFeesReport]" DisplayName="Filter Data Table - Generated Admin Fees" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="659,192" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[dt_AdminFeesReport]" SelectColumnsMode="Remove">
+      <ui:FilterDataTable.Filters>
+        <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+          <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
+            <ui:FilterOperationArgument.Column>
+              <InArgument x:TypeArguments="x:String">["Posting Key"]</InArgument>
+            </ui:FilterOperationArgument.Column>
+            <ui:FilterOperationArgument.Operand>
+              <InArgument x:TypeArguments="x:String">["1"]</InArgument>
+            </ui:FilterOperationArgument.Operand>
+          </ui:FilterOperationArgument>
+          <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
+            <ui:FilterOperationArgument.Column>
+              <InArgument x:TypeArguments="x:String">["Posting Key"]</InArgument>
+            </ui:FilterOperationArgument.Column>
+            <ui:FilterOperationArgument.Operand>
+              <InArgument x:TypeArguments="x:String">["50"]</InArgument>
+            </ui:FilterOperationArgument.Operand>
+          </ui:FilterOperationArgument>
+        </scg:List>
+      </ui:FilterDataTable.Filters>
+      <ui:FilterDataTable.SelectColumns>
+        <scg:List x:TypeArguments="InArgument" Capacity="4">
+          <x:Null />
+        </scg:List>
+      </ui:FilterDataTable.SelectColumns>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:FilterDataTable>
+    <ui:MergeDataTable Destination="[dt_UpdatedAdminFees]" DisplayName="Merge Data Table" sap:VirtualizedContainerService.HintSize="659,133" sap2010:WorkflowViewState.IdRef="MergeDataTable_1" MissingSchemaAction="Add" Source="[dt_AdminFeesReport]" />
+    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[dt_UpdatedAdminFees]" DisplayName="Write Range Workbook- Updated Admin Fees on Intermediate sheet" sap:VirtualizedContainerService.HintSize="659,116" sap2010:WorkflowViewState.IdRef="WriteRange_5" SheetName="[in_Config(&quot;AdminFeesSheetFinalUpdated&quot;).ToString]" WorkbookPath="[in_Config(&quot;AdminFeesReport&quot;).ToString]" />
+    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[dt_UpdatedAdminFees]" DisplayName="Write Range Workbook- Updated Admin Fees on Final Sheet" sap:VirtualizedContainerService.HintSize="659,116" sap2010:WorkflowViewState.IdRef="WriteRange_6" SheetName="[in_Config(&quot;AdminFeesSheetFinalUpdated&quot;).ToString]" WorkbookPath="[in_Config(&quot;AdminFeesFinal&quot;).ToString]" />
+  </Sequence>
+</Activity>

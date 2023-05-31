@@ -1,0 +1,13 @@
+﻿{
+  "Id": "Mu5BM7QkNUmVrnE22fdV3A",
+  "Reference": "Fv2nvoLrq0eKUR-rLQM7hA/Mu5BM7QkNUmVrnE22fdV3A",
+  "ParentRef": "Fv2nvoLrq0eKUR-rLQM7hA/tKJS3z6bakmhGUAle9XzQw",
+  "Name": "002_Excel",
+  "Type": "Element",
+  "TaxonomyType": "None",
+  "Created": "2023-04-04T05:44:10.4631913Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-04-04T05:44:10.4631913Z"
+}

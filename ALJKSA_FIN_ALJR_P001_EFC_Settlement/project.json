@@ -1,0 +1,74 @@
+{
+  "name": "ALJKSA_FIN_ALJR_P001_EFC_Settlement",
+  "description": "",
+  "main": "Main.xaml",
+  "dependencies": {
+    "OneDrive_Reusable_Component": "[1.0.2]",
+    "SAPGUIInfo.Activities": "[2.0.1]",
+    "UiPath.Excel.Activities": "[2.16.1]",
+    "UiPath.System.Activities": "[22.10.4]",
+    "UiPath.Testing.Activities": "[23.4.0]",
+    "UiPath.UIAutomation.Activities": "[22.10.4]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "22.10.4.0",
+  "projectVersion": "1.0.1-alpha.5",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "modernBehavior": true
+  },
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "30682cda-48d3-4dce-8d1e-a474054055a1",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "TestCaseMain.xaml",
+      "uniqueId": "252819fa-a057-4826-9036-c632cdcb4233",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "UAT_Main.xaml",
+      "uniqueId": "38db93c2-f4d2-4156-8cac-7cb1c79e74e5",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Windows"
+}

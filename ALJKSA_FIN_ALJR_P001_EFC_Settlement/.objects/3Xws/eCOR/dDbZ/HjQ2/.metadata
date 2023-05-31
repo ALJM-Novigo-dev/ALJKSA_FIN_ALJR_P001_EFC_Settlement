@@ -1,0 +1,14 @@
+﻿{
+  "Id": "HjQ2yclLGkC1gBZrgXjEVA",
+  "Reference": "Fv2nvoLrq0eKUR-rLQM7hA/HjQ2yclLGkC1gBZrgXjEVA",
+  "ParentRef": "Fv2nvoLrq0eKUR-rLQM7hA/dDbZE8FisEOCSdoQMYjf9Q",
+  "Name": "005_SAPBI_Label",
+  "Description": "Label ",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Created": "2023-04-04T05:44:09.5904696Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-04-04T05:44:09.5904696Z"
+}

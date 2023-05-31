@@ -1,0 +1,14 @@
+﻿{
+  "Id": "7ds8YRqu2Uueb8zDujTr1Q",
+  "Reference": "Fv2nvoLrq0eKUR-rLQM7hA/7ds8YRqu2Uueb8zDujTr1Q",
+  "ParentRef": "Fv2nvoLrq0eKUR-rLQM7hA/TLYSvI6wP0SzS-bTeSD4Dg",
+  "Name": "002_All",
+  "Description": "Option - to see all the available alerts and document in the Inbox",
+  "Type": "Element",
+  "TaxonomyType": "None",
+  "Created": "2023-04-04T05:44:10.1716844Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-04-04T05:44:10.1716844Z"
+}

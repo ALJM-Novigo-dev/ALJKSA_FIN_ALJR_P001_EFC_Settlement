@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="w--V570IKUqvJtc2fZ6R4A" Reference="KLsic7J1QE-Q7h60I_1cQw/6qgigCpoxUmHikslh3mSGA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://aljbodev.alj.com/BOE/portal/2210051642/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" ContentHash="KqGRnM_jrUyhgu0ocYY9JA" DesignTimeRectangle="335, 251, 551, 35" DesignTimeScaleFactor="1" ElementType="TableRow" FriendlyName="'unchecked'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.Table' ui5p-mode='MultiSelect' /&gt;&lt;webctrl ui5-tableRow='0' ui5-type='Row' innertext='{0}' /&gt;&quot;, typedCalenderYear)]" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.Table' ui5p-mode='MultiSelect' /&gt;&lt;webctrl ui5-tableRow='0' ui5-type='Row' innertext='{0}' tag='TR' type='' class='sapMLIB sapMLIB-CTX sapMLIBShowSeparator sapMLIBTypeActive sapMLIBActionable sapMLIBHoverable sapMLIBFocusable sapMListTblRow wingTestLovRow' aaname='' check:text='unchecked' /&gt;&quot;, typedCalenderYear)]" Guid="98484441-f6b1-43d0-b9f9-def3f41f6ee1" ImageBase64="" Reference="KLsic7J1QE-Q7h60I_1cQw/6qgigCpoxUmHikslh3mSGA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="b7090c64b970b5966df0833e13ae4454.png" xmlns="">0XenjkoNrKUaeegehiO2ZIg</imageRef>
+    </TargetAnchorable>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData DefaultValue="2022" Name="typedCalenderYear" />
+    </scg:List>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

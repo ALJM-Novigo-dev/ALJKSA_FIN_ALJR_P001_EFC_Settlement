@@ -1,0 +1,14 @@
+﻿{
+  "Id": "YhfWsDH7J0m0ELM06QGYgA",
+  "Reference": "Fv2nvoLrq0eKUR-rLQM7hA/YhfWsDH7J0m0ELM06QGYgA",
+  "ParentRef": "Fv2nvoLrq0eKUR-rLQM7hA/sRc38kPZJEyQllfH52b6lg",
+  "Name": "Your session",
+  "Description": "Session Complete message",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Created": "2023-04-04T05:44:10.3235443Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-04-04T05:44:10.3235443Z"
+}

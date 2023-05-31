@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="cHdSsnD5Nk2fwRX8PxKg3A" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://aljbodev.alj.com/BOE/portal/2210051642/FioriBI/UI5logon.jsp" DesignTimeRectangle="142, 224, 1099, 52" DesignTimeScaleFactor="1" FriendlyName="'Message Strip'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.MessageStrip' innertext='Message Strip Error ClosableAccount information not recognized: Failed while trying to log on user *. RFC error: &amp;quot; Number:000 (USER_OR_PASSWORD_INCORRECT)&amp;quot; (FWM 00013)  Close' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.MessageStrip' innertext='Message Strip Error ClosableAccount information not recognized: Failed while trying to log on user *. RFC error: &amp;quot; Number:000 (USER_OR_PASSWORD_INCORRECT)&amp;quot; (FWM 00013)  Close' tag='DIV' type='' class='sapMMsgStrip sapMMsgStripError BILP-Error-Label' aaname='' check:text='Message Strip Error ClosableAccount information not recognized: Failed while trying to log on user' /&gt;" Guid="9a2da846-56c6-4440-93d9-2aa79cd3dd72" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="197ad12c928a3e2a8718c59c78441f41.png" xmlns="">0rac49S43mUC_PcICcLKcIQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

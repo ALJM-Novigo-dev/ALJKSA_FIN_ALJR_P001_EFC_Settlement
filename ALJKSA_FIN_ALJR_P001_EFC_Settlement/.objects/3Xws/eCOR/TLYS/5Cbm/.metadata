@@ -1,0 +1,13 @@
+﻿{
+  "Id": "5CbmsX8Kyk2QGgkADFs_RA",
+  "Reference": "Fv2nvoLrq0eKUR-rLQM7hA/5CbmsX8Kyk2QGgkADFs_RA",
+  "ParentRef": "Fv2nvoLrq0eKUR-rLQM7hA/TLYSvI6wP0SzS-bTeSD4Dg",
+  "Name": "003_SearchBar",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Created": "2023-04-04T05:44:10.1852559Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-04-04T05:44:10.1852559Z"
+}

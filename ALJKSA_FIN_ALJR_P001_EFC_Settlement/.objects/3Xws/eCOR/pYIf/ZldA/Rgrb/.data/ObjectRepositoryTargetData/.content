@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="h5raoyWMXUuioKPuizWu_w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://aljboqa.alj.com/BOE/portal/2305232115/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" DesignTimeRectangle="577, 307, 554, 34" DesignTimeScaleFactor="1" ElementType="TableRow" FriendlyName="'unchecked'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.Table' ui5p-mode='SingleSelectLeft' /&gt;&lt;webctrl ui5-tableRow='0' ui5-type='Row' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.Table' ui5p-mode='SingleSelectLeft' /&gt;&lt;webctrl ui5-tableRow='0' ui5-type='Row' tag='TR' type='' class='sapMLIB sapMLIB-CTX sapMLIBShowSeparator sapMLIBTypeActive sapMLIBActionable sapMLIBHoverable sapMLIBFocusable sapMListTblRow wingTestLovRow' aaname='' check:innerText='2025' /&gt;" Guid="25773d5e-65fc-4d89-8fe1-0bb3b6209953" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="97436393b03c9586cad54082b8bd5a1e.png" xmlns="">0hNYiLZsrD0yXt4mQ5C0iaA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

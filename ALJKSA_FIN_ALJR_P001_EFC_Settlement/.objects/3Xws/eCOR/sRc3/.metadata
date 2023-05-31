@@ -1,0 +1,15 @@
+﻿{
+  "Id": "sRc38kPZJEyQllfH52b6lg",
+  "Reference": "Fv2nvoLrq0eKUR-rLQM7hA/sRc38kPZJEyQllfH52b6lg",
+  "ParentRef": "Fv2nvoLrq0eKUR-rLQM7hA/eCORZY0-ek-E5KzfvE6IKQ",
+  "Name": "005_BI_Inbox_Page",
+  "Type": "Screen",
+  "Created": "2023-04-04T05:44:10.2470522Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-04-04T05:44:10.2470522Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

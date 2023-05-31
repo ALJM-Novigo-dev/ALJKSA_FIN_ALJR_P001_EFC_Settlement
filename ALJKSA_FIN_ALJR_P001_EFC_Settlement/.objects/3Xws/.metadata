@@ -1,0 +1,11 @@
+﻿{
+  "Id": "3XwsYyh2QkO__PK6TloDhg",
+  "Reference": "Fv2nvoLrq0eKUR-rLQM7hA/3XwsYyh2QkO__PK6TloDhg",
+  "Name": "001_SAP_BI",
+  "Type": "App",
+  "Created": "2023-04-04T05:44:09.5048786Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-04-04T05:44:09.5048786Z"
+}

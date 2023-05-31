@@ -1,0 +1,14 @@
+﻿{
+  "Id": "9cx9uuXF_kW2gJd_uXFwRg",
+  "Reference": "Fv2nvoLrq0eKUR-rLQM7hA/9cx9uuXF_kW2gJd_uXFwRg",
+  "ParentRef": "Fv2nvoLrq0eKUR-rLQM7hA/RgrbM5Kq6UGbysYueSOWNg",
+  "Name": "Check App State '005E_ResultActive'",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2023-05-26T06:00:22.1903288Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=22.10.4.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=23.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-05-26T06:00:22.1903288Z"
+}

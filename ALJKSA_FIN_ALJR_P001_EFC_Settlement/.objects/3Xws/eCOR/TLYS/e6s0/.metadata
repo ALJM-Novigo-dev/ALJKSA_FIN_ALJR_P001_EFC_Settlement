@@ -1,0 +1,16 @@
+﻿{
+  "Id": "e6s0ykSok02LJyg05NBlaQ",
+  "Reference": "Fv2nvoLrq0eKUR-rLQM7hA/e6s0ykSok02LJyg05NBlaQ",
+  "ParentRef": "Fv2nvoLrq0eKUR-rLQM7hA/TLYSvI6wP0SzS-bTeSD4Dg",
+  "Name": "006_ALJR New",
+  "Type": "Element",
+  "TaxonomyType": "None",
+  "Created": "2023-04-04T05:44:10.2231287Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-04-04T05:44:10.2231287Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

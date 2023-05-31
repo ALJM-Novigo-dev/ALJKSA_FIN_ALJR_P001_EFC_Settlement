@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="rO8Aop0_kkekDss83U6FkA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="285, 95, 68, 23" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd aaname='Confirm Save As' cls='DirectUIHWND' /&gt;&lt;wnd aaname='No' cls='Button' title='&amp;amp;No' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Confirm Save As' cls='DirectUIHWND' /&gt;&lt;wnd aaname='No' cls='Button' title='&amp;amp;No' check:text='unchecked' /&gt;" Guid="e0adcbea-53d1-4fdd-be61-c82c6dce5fa6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEgAAAAbCAYAAADf98keAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADsSURBVFhH7dTBDcMgDIVhdmIbJumNVViFKXpmAzZwCSKpnaR1L1SWeIdfqi16+URwtVZCnwOQEoCUBJB7PFFLmIjh5vCKCRMxjAOllCUDkBKAlACkZAQoUXCOXEg3e08x891/MwTkyXtHIV33ANohUmxIkfJ5D6A3RAqOfMyXfZ9zA9w+xZG8bXMyB/T9N0PpWAxvUgaBWimMB5vtO0igxP633bbZt8gmUMkU+4MNoNEZqHW8N/t+O3P+xCTYjOwCtXL0DKh1oHG4uRkBshuAlACkBCCln4FWT5iI4ebwigkTPqBrAFIC0NcqvQAqKc8lJtVWBAAAAABJRU5ErkJggg==" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Confirm Save As' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="4b2624b5f19edb6a333c59955053e67f.png" xmlns="">0V0GNmmD8OUqKWIH1NhawhQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,13 @@
+﻿{
+  "Id": "kBnKK8MyxE6FuMj3mGwHkw",
+  "Reference": "Fv2nvoLrq0eKUR-rLQM7hA/kBnKK8MyxE6FuMj3mGwHkw",
+  "ParentRef": "Fv2nvoLrq0eKUR-rLQM7hA/tKJS3z6bakmhGUAle9XzQw",
+  "Name": "006_Cancel",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Created": "2023-04-04T05:44:10.5072847Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-04-04T05:44:10.5072847Z"
+}
