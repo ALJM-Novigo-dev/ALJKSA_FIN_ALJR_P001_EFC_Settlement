@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="58Ie2WYJ-ECglMaSyqYZYQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-  <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://aljbodev.alj.com/BOE/portal/2210051642/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" DesignTimeRectangle="457, 400, 469, 16" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Your session'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.Text' ui5p-text='Your session will expire in 5 minute(s). Would you like to conti*' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.Text' ui5p-text='Your session will expire in 5 minute(s). Would you like to conti*' tag='SPAN' type='' class='sapMText sapUiSelectable sapMTextMaxWidth' aaname='Your session will expire in 5 minute(s). Would you like to continue or log off?' check:innerText='Your session will expire in 5 minute(s). Would you like to continue or log off?' /&gt;" Guid="332f45fb-c29b-4e62-a919-35a705166bdd" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
-      <imageRef attrName="InformativeScreenshot" originalValue="03fdf68183201a9e85253f6cb74ed2d9.png" xmlns="">06tL5BO8xbkK8GV1IT-fX9A</imageRef>
-    </TargetAnchorable>
-  </ObjectRepositoryTargetData.Data>
-</ObjectRepositoryTargetData>

@@ -13,7 +13,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>647,674</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>951,605</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>_003_FilterDataTableOnDates_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -93,51 +93,20 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="003_FilterDataTableOnDates" sap:VirtualizedContainerService.HintSize="376,609" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="003_FilterDataTableOnDates" sap:VirtualizedContainerService.HintSize="400,540" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message FilterDataTableOnDate : Satrt" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;FilterDataTableOnDate : Satrt&quot;]" />
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,52" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-      <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,253" sap2010:WorkflowViewState.IdRef="Sequence_2">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeCode ContinueOnError="{x:Null}" Code="Try&#xD;&#xA;Dim filteredData As DataTable = in_InputDataTable.Clone&#xD;&#xA;&#xD;&#xA;For Each row As DataRow In in_InputDataTable.Rows&#xD;&#xA;&#xD;&#xA;    If (CDate(row(in_ColumnName))).Month = CDate(in_Date).Month AndAlso (CDate(row(in_ColumnName))).Year = CDate(in_Date).Year Then&#xD;&#xA;&#xD;&#xA;        filteredData.ImportRow(row)&#xD;&#xA;&#xD;&#xA;    End If&#xD;&#xA;&#xD;&#xA;Next&#xD;&#xA;&#xD;&#xA;in_InputDataTable=filteredData&#xD;&#xA;Catch err As Exception&#xD;&#xA;&#x9;console.WriteLine(err.message)&#xD;&#xA;End Try" DisplayName="Invoke Code Filter Column with Date" sap:VirtualizedContainerService.HintSize="334,165" sap2010:WorkflowViewState.IdRef="InvokeCode_2">
-            <ui:InvokeCode.Arguments>
-              <InOutArgument x:TypeArguments="sd:DataTable" x:Key="in_InputDataTable">[in_InputDataTable]</InOutArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="in_ColumnName">[in_ColumnName]</InArgument>
-              <InArgument x:TypeArguments="s:DateTime" x:Key="in_Date">[in_Date]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="Argument1" />
-            </ui:InvokeCode.Arguments>
-          </ui:InvokeCode>
-        </Sequence>
-      </ui:CommentOut.Body>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </ui:CommentOut>
-    <ui:InvokeCode ContinueOnError="{x:Null}" Code="Try&#xD;&#xA;Dim filteredData As DataTable = in_InputDataTable.Clone()&#xD;&#xA;&#xD;&#xA;For Each row As DataRow In in_InputDataTable.Rows&#xD;&#xA;    Dim dateValue As DateTime = CDate(row(in_ColumnName))&#xD;&#xA;    Dim rowMonth As Integer = dateValue.Month&#xD;&#xA;    Dim rowYear As Integer = dateValue.Year&#xD;&#xA;    Dim targetMonth As Integer = CDate(in_Date).Month&#xD;&#xA;    Dim targetYear As Integer = CDate(in_Date).Year&#xD;&#xA;&#xD;&#xA;    If rowMonth = targetMonth AndAlso rowYear = targetYear Then&#xD;&#xA;        filteredData.ImportRow(row)&#xD;&#xA;    End If&#xD;&#xA;Next&#xD;&#xA;&#xD;&#xA;in_InputDataTable = filteredData&#xD;&#xA;Catch err As Exception&#xD;&#xA;&#x9;console.WriteLine(err.message)&#xD;&#xA;End Try" DisplayName="Invoke Code Filter Column with Date" sap:VirtualizedContainerService.HintSize="334,165" sap2010:WorkflowViewState.IdRef="InvokeCode_3">
+    <ui:LogMessage DisplayName="Log Message FilterDataTableOnDate : Satrt" sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;FilterDataTableOnDate : Satrt&quot;]" />
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="Try&#xD;&#xA;Dim filteredData As DataTable = in_InputDataTable.Clone()&#xD;&#xA;&#xD;&#xA;For Each row As DataRow In in_InputDataTable.Rows&#xD;&#xA;    Dim dateValue As DateTime = CDate(row(in_ColumnName))&#xD;&#xA;    Dim rowMonth As Integer = dateValue.Month&#xD;&#xA;    Dim rowYear As Integer = dateValue.Year&#xD;&#xA;    Dim targetMonth As Integer = CDate(in_Date).Month&#xD;&#xA;    Dim targetYear As Integer = CDate(in_Date).Year&#xD;&#xA;&#xD;&#xA;    If rowMonth = targetMonth AndAlso rowYear = targetYear Then&#xD;&#xA;        filteredData.ImportRow(row)&#xD;&#xA;    End If&#xD;&#xA;Next&#xD;&#xA;&#xD;&#xA;in_InputDataTable = filteredData&#xD;&#xA;Catch err As Exception&#xD;&#xA;&#x9;console.WriteLine(err.message)&#xD;&#xA;&#x9;Throw (err)&#xD;&#xA;End Try" DisplayName="Invoke Code Filter Column with Date" sap:VirtualizedContainerService.HintSize="338,165" sap2010:WorkflowViewState.IdRef="InvokeCode_3">
       <ui:InvokeCode.Arguments>
-        <InOutArgument x:TypeArguments="sd:DataTable" x:Key="in_InputDataTable">
-          <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="in_InputDataTable" />
-        </InOutArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_ColumnName">
-          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_ColumnName" />
-        </InArgument>
-        <InArgument x:TypeArguments="s:DateTime" x:Key="in_Date">
-          <VisualBasicValue x:TypeArguments="s:DateTime" ExpressionText="in_Date" />
-        </InArgument>
+        <InOutArgument x:TypeArguments="sd:DataTable" x:Key="in_InputDataTable">[in_InputDataTable]</InOutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_ColumnName">[in_ColumnName]</InArgument>
+        <InArgument x:TypeArguments="s:DateTime" x:Key="in_Date">[in_Date]</InArgument>
       </ui:InvokeCode.Arguments>
     </ui:InvokeCode>
-    <ui:LogMessage DisplayName="Log Message FilterDataTableOnDate : End" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;FilterDataTableOnDate : End&quot;]" />
+    <ui:LogMessage DisplayName="Log Message FilterDataTableOnDate : End" sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;FilterDataTableOnDate : End&quot;]" />
   </Sequence>
 </Activity>

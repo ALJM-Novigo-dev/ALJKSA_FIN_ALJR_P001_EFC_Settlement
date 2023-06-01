@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="Hg6iv5yAoUm40CXycp3C3A" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-  <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://aljboqa.alj.com/BOE/portal/2210102313/FioriBI/UI5logon.jsp" DesignTimeRectangle="561, 518, 260, 32" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Sign in'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-role='button' aaname='Sign in' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-role='button' aaname='Sign in' tag='BUTTON' type='' class='sapMBtnBase sapMBtn sapMBtnInverted BILP-button BILP-lsLoginButton' check:text='Sign in' /&gt;" Guid="24436b87-cd1d-4561-aa72-439122091689" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
-      <imageRef attrName="InformativeScreenshot" originalValue="09ef6e0db16ac3dc61fd2136c07edd54.png" xmlns="">0RsweSeOc-Eqrr0uRFsnB2A</imageRef>
-    </TargetAnchorable>
-  </ObjectRepositoryTargetData.Data>
-</ObjectRepositoryTargetData>

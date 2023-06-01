@@ -14,7 +14,7 @@
   <this:Settlement.in_Config>
     <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" />
   </this:Settlement.in_Config>
-  <sap:VirtualizedContainerService.HintSize>960,2389</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>951,2653</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -113,9 +113,10 @@
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Settlement" sap:VirtualizedContainerService.HintSize="636,2324" sap2010:WorkflowViewState.IdRef="Sequence_26">
+  <Sequence DisplayName="Settlement" sap:VirtualizedContainerService.HintSize="636,2588" sap2010:WorkflowViewState.IdRef="Sequence_26">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="rowIndex" />
       <Variable x:TypeArguments="x:String" Default="Settlement" Name="intermediateSheetName" />
@@ -126,6 +127,7 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message - Start Settlement" sap:VirtualizedContainerService.HintSize="574,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Start - Settlement Generation&quot;]" />
     <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[rowIndex]" DataTable="[io_dt_SettlementTemp]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="574,2060" sap2010:WorkflowViewState.IdRef="ForEachRow_5">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
@@ -301,5 +303,6 @@
         <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_Input">[io_dt_SettlementTemp]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
+    <ui:LogMessage DisplayName="Log Message - End Settlement" sap:VirtualizedContainerService.HintSize="574,92" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;End - Settlement Generation&quot;]" />
   </Sequence>
 </Activity>

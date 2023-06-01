@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="qwT4dC3S_kq95vMM0VeKhA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-  <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://aljbodev.alj.com/BOE/portal/2210051642/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" DesignTimeRectangle="77, 400, 241, 48" DesignTimeScaleFactor="1" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-label='Don&amp;apos;t show this message again.' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-label='Don&amp;apos;t show this message again.' tag='DIV' type='' class='sapMCb sapMCbHasLabel' aaname='' /&gt;" Guid="96abeaf3-9c88-47b6-a234-891ef8a49284" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
-      <imageRef attrName="InformativeScreenshot" originalValue="76b175f2b10c6b44ebead482ea59cc3d.png" xmlns="">0tKf7S9bZ50myJGGbZo5fDQ</imageRef>
-    </TargetAnchorable>
-  </ObjectRepositoryTargetData.Data>
-</ObjectRepositoryTargetData>

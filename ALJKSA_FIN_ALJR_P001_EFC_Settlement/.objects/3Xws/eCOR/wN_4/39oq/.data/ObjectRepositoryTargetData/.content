@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="FzFCFFo0EUSa5Qg-2EptWQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-  <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://aljbodev.alj.com/BOE/portal/2210051642/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" DesignTimeRectangle="77, 319, 1229, 48" DesignTimeScaleFactor="1" FriendlyName="'Data Protection'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.Bar' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl ui5-class='sap.m.Bar' tag='DIV' type='' class='sapMIBar sapMIBar-CTX sapMBar sapMContent-CTX sapMBar-CTX sapMHeader-CTX sapMBarTitleAlignAuto' aaname='' check:innerText='Data Protection' /&gt;" Guid="6f018f0d-4a5c-42d2-8e18-726c2c389c78" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
-      <imageRef attrName="InformativeScreenshot" originalValue="1987bd278e8ee0fff2618d01cfd118a5.png" xmlns="">0Y1e7xe0AL0mOlohjGU0KcA</imageRef>
-    </TargetAnchorable>
-  </ObjectRepositoryTargetData.Data>
-</ObjectRepositoryTargetData>

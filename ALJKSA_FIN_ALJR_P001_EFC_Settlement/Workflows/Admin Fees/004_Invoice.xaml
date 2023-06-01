@@ -14,7 +14,7 @@
   <this:Invoice.in_Config>
     <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" />
   </this:Invoice.in_Config>
-  <sap:VirtualizedContainerService.HintSize>960,2481</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>951,2653</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -113,9 +113,10 @@
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Invoice" sap:VirtualizedContainerService.HintSize="636,2416" sap2010:WorkflowViewState.IdRef="Sequence_15">
+  <Sequence DisplayName="Invoice" sap:VirtualizedContainerService.HintSize="636,2588" sap2010:WorkflowViewState.IdRef="Sequence_15">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="rowIndex" />
       <Variable x:TypeArguments="x:String" Default="Invoice" Name="intermediateSheetName" />
@@ -126,38 +127,7 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="574,52" sap2010:WorkflowViewState.IdRef="CommentOut_2">
-      <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,276" sap2010:WorkflowViewState.IdRef="Sequence_17">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeCode ContinueOnError="{x:Null}" Code="For Each row As DataRow In io_dt_InvoiceTemp.Rows&#xA;&#xA;    If io_dt_InvoiceTemp.Rows.IndexOf(row) = 0 Then&#xA;        ' Assign debit values for the first row&#xA;        row(&quot;Posting Key&quot;) = in_str_DebitPostingKey&#xA;        row(&quot;GL Vendor&quot;) = in_dr_SalesReport(&quot;Customer&quot;).ToString&#xA;&#x9;&#x9;row(&quot;Tax Code&quot;) = &quot;&quot;&#xA;&#x9;&#x9;row(&quot;Reference Key 1&quot;) = in_dr_SalesReport(&quot;Sales document&quot;).ToString+&quot;                  -&quot;&#xA;&#x9;&#x9;row(&quot;Assignment&quot;) = in_dr_SalesReport(&quot;Bank Reference&quot;).ToString+&quot;                    -&quot;&#xA;        ' Add more assignments as needed&#xA;&#x9;&#x9;&#xA;    ElseIf dt_InvoiceTemp.Rows.IndexOf(row) = 1 Then&#xA;        ' Assign credit values for the second row&#xA;         row(&quot;Posting Key&quot;) = in_str_CreditPostingKey&#xA;        row(&quot;GL Vendor&quot;) = in_dt_GLAndCustomer.Select(&quot;[Customer]=&quot;+in_dr_SalesReport(&quot;Customer&quot;).ToString)(0).Item(&quot;Bank#&quot;).ToString&#xA;&#x9;&#x9;row(&quot;Tax Code&quot;) = &quot;BI&quot;&#xA;&#x9;&#x9;row(&quot;Reference Key 1&quot;) = in_dr_SalesReport(&quot;Purchase Order&quot;).ToString+&quot;                  -&quot;&#xA;&#x9;&#x9;row(&quot;Assignment&quot;) = in_dr_SalesReport(&quot;DBM&quot;).ToString&#xA;        ' Add more assignments as needed for the second row&#xA;&#x9;&#x9;&#xA;    End If&#xA;&#xA;    ' Perform common assignments for all rows&#xA;&#x9;&#xA;    row(&quot;Line item&quot;) = &quot;CommonValue&quot;&#xA;Next&#xA;" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="338,165" sap2010:WorkflowViewState.IdRef="InvokeCode_4">
-            <ui:InvokeCode.Arguments>
-              <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_dt_InvoiceTemp">[io_dt_InvoiceTemp]</InOutArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="in_str_DebitPostingKey">1</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="in_str_CreditPostingKey">50</InArgument>
-              <InArgument x:TypeArguments="sd:DataRow" x:Key="in_dr_SalesReport">[in_SalesReportRow]</InArgument>
-              <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_GLAndCustomer">[in_dt_GLAndCustomer]</InArgument>
-            </ui:InvokeCode.Arguments>
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-          </ui:InvokeCode>
-        </Sequence>
-      </ui:CommentOut.Body>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </ui:CommentOut>
+    <ui:LogMessage DisplayName="Log Message - Start invoice" sap:VirtualizedContainerService.HintSize="574,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Start - Invoice Generation&quot;]" />
     <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[rowIndex]" DataTable="[io_dt_InvoiceTemp]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="574,2060" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
@@ -333,5 +303,6 @@
         <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_Input">[io_dt_InvoiceTemp]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
+    <ui:LogMessage DisplayName="Log Message - End invoice" sap:VirtualizedContainerService.HintSize="574,92" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;End - Invoice Generation&quot;]" />
   </Sequence>
 </Activity>

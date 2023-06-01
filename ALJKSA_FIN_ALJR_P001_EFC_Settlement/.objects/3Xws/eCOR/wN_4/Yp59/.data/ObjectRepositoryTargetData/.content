@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="zxEBkty-t0KP_t-xv4_83A" Reference="KLsic7J1QE-Q7h60I_1cQw/rECDLy56lEKOen0zDQIpmg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-  <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://aljbodev.alj.com/BOE/portal/2210051642/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" DesignTimeRectangle="608, 199, 176, 176" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'BI Inbox'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl id='Inbox' aria-label='BI Inbox&amp;#xA;' innertext='BI Inbox' visibleinnertext='BI Inbox' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl id='Inbox' aria-label='BI Inbox&amp;#xA;' innertext='BI Inbox' visibleinnertext='BI Inbox' tag='DIV' type='' class='sapMGT sapMGTStateLoaded sapMGTScopeDisplay OneByOne sapMPointer sapUiTinyMarginBegin sapUiTinyMarginTop footertext' aaname='' check:text='BI Inbox' /&gt;" Guid="2d794ee1-da7b-4ee0-8c6a-e66dc99b3538" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
-      <imageRef attrName="InformativeScreenshot" originalValue="ca0cbf780319145587fbf5e81d92a389.png" xmlns="">0hxgcBcleeE6hHffrRXBmKg</imageRef>
-    </TargetAnchorable>
-    <x:String x:Key="ActivityType">None</x:String>
-  </ObjectRepositoryTargetData.Data>
-</ObjectRepositoryTargetData>

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="H7ERooaUnUaK8NHed0vA8g" Reference="Fv2nvoLrq0eKUR-rLQM7hA/GA8ZzlO5hUqZ1RrOu7LTpA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-  <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://aljbodev.alj.com/BOE/portal/2210051642/FioriBI/main.jsp?service=%2Fcommon%2FappService.do&amp;appKind=InfoView" DesignTimeRectangle="206, 145, 32, 32" DesignTimeScaleFactor="1" FriendlyName="'Export (Ctrl+E)'" FullSelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl aaname='Export*' class='sapMBtnBase sapMBtn sapWiseWorkbenchTBButton wingTestWorkbenchTBExportAction export-xray-marker' /&gt;" FuzzySelectorArgument="&lt;webctrl name='servletBridgeIframe' tag='IFRAME' /&gt;&lt;webctrl aaname='Export*' class='sapMBtnBase sapMBtn sapWiseWorkbenchTBButton wingTestWorkbenchTBExportAction export-xray-marker' tag='BUTTON' type='' check:text='Export (Ctrl+E)' /&gt;" Guid="cda63380-0c92-4fd4-98e3-c5eb3bdfe4d2" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACySURBVFhH7dOxDYMwEIVhhmIhOjZggogJmICGjooVUrKBKwagSUN1YJ1AUXLiGdlFgl7xS5bA8Mkc2fxa5JciCEUQiiAUQah7glzfSNlP5rWrEYQiCEUQ6i6gUR5FfSDeQX6dF410ztqHizihSbpKUTtIMa08zfvDivxkisq309LiML4EM7Sj4jG+JEOdsn8Ffc7KxapBnPnc7wJB+pubLwsqfL44QyiCUAShCEIRdN4iKwx8KrwuY2hBAAAAAElFTkSuQmCC" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SAP BI Launch Pad' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
-      <imageRef attrName="InformativeScreenshot" originalValue="65524f82eb1e938a7df2d1e60c382407.png" xmlns="">0EpMoiuL4LEydjZPQ8vQw-Q</imageRef>
-    </TargetAnchorable>
-    <x:String x:Key="ActivityType">None</x:String>
-  </ObjectRepositoryTargetData.Data>
-</ObjectRepositoryTargetData>
